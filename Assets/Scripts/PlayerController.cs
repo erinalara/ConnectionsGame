@@ -22,6 +22,11 @@ public class PlayerController : MonoBehaviour
         
     }
 
+    void Awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
+    }
+
     /*void ProcessInputs()
     {
 *//*        Vector2 movementDir = (Input.GetAxis("Horizontal"), ProcessInputs().GetAxis("Vertical"));
@@ -52,9 +57,6 @@ public class PlayerController : MonoBehaviour
             animator.SetFloat("lastH", horizontal);
             animator.SetFloat("lastV", vertical);
         }
-
-        /*Debug.Log(horizontal);
-        Debug.Log(vertical);*/
 
         transform.position = position;
     }
