@@ -11,7 +11,8 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        GameObject cam = GameObject.FindGameObjectWithTag("CamBounds");
+        Physics2D.IgnoreCollision(cam.GetComponent<BoxCollider2D>(), GetComponent<BoxCollider2D>());
     }
 
     // Update is called once per frame
@@ -68,6 +69,7 @@ public class PlayerController : MonoBehaviour
         {
             tLoader.StartTransition();
         }
+        
     }
 
 }
