@@ -8,18 +8,22 @@ public class PlayerController : MonoBehaviour
 {
     public TransitionLoader tLoader;
     public Animator animator;
+
+    public bool interactionActivated;
     // Start is called before the first frame update
     void Start()
     {
         GameObject cam = GameObject.FindGameObjectWithTag("CamBounds");
         Physics2D.IgnoreCollision(cam.GetComponent<BoxCollider2D>(), GetComponent<BoxCollider2D>());
+        interactionActivated = false;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-/*        ProcessInputs();
-*/        Move();
+        // ProcessInputs();
+        if (!interactionActivated)
+            Move();
         
     }
 
@@ -64,12 +68,13 @@ public class PlayerController : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("Tile collision!");
         if (collision.gameObject.tag == "FloorExit")
         {
             tLoader.StartTransition();
         }
         
     }
+
+    
 
 }
