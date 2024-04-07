@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9da1bc3d27925bd438e5cf6d175ac213, type: 3}
   m_Name: Conversation1
   m_EditorClassIdentifier: 
-  actors: 03000000030000000000000003000000
+  actors: 030000000300000000000000030000000300000002000000
   randomActorName: 
   dialogue:
   - (Stupid stupid stupid, why I oughta-)
   - Oh! Hello!
   - Hi there!
-  - You look familiar. Have I seen you before?
+  - You look familiar.
   - Have I seen you before?
   optionText:
   - I don't think so.

@@ -6,6 +6,8 @@ TagManager:
   tags:
   - FloorExit
   - CamBounds
+  - OptionButton
+  - ConnectionBar
   layers:
   - Default
   - TransparentFX
