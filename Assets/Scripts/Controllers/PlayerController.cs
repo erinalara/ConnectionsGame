@@ -14,7 +14,8 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         GameObject cam = GameObject.FindGameObjectWithTag("CamBounds");
-        Physics2D.IgnoreCollision(cam.GetComponent<BoxCollider2D>(), GetComponent<BoxCollider2D>());
+        if (cam) 
+            Physics2D.IgnoreCollision(cam.GetComponent<BoxCollider2D>(), GetComponent<BoxCollider2D>());
         interactionActivated = false;
     }
 

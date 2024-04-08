@@ -34,18 +34,7 @@ public class NPCDialogue : MonoBehaviour
             // Check player direction
 
 
-            // Check which conversation to load
-            // First, check quest status
-            // Then, load conversation based on quest status
-            /*if (questHandler != null)
-            {
-                if (questHandler.status == QuestStatus.InProgress)
-                {
-                    convoNum = 1;
-                }
-                else if (questHandler.status == QuestStatus.Completed)
-                    convoNum = 3;
-            }*/
+            // check quest status
             int convoNum = (questHandler == null) ? 0: questHandler.CheckQuestStatus();
 
             // initiate convo

@@ -8,6 +8,9 @@ public class QuestHandler : MonoBehaviour
     private QuestStatus status;
     private ConnectionBar connectionBar;
 
+    // 
+    private int currentQuestNum;
+
 
     // Start is called before the first frame update
     void Start()
