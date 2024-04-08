@@ -7,10 +7,11 @@ public class QuestSO : ScriptableObject
 {
 
     // Quest type, either Scavenger or Word
-    public QuestType[] qType;
+    public QuestType qType;
 
     // NPC that authored the quest/request
-    public DialogueActors[] originNPC;
+    public DialogueActors originNPC;
+
 
 
     [Tooltip("Only needed for Scavenger quests")]

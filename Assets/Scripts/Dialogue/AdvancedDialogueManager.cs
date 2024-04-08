@@ -80,6 +80,8 @@ public class AdvancedDialogueManager : MonoBehaviour
             // cancel dialogue
             if (stepNum >= currentConversation.actors.Length)
             {
+                // Update quest status if needed
+                UpdateQuest();
                 TurnOffDialogue();
             }
             // continue dialogue
@@ -188,11 +190,11 @@ public class AdvancedDialogueManager : MonoBehaviour
         canContinueText = true;
     }
 
-    public void InitiateDialogue(NPCDialogue npcDialogue)
+    public void InitiateDialogue(NPCDialogue npcDialogue, int convoNum)
     {
         // array we are stepping through
 
-        currentConversation = npcDialogue.conversation[0];
+        currentConversation = npcDialogue.conversation[convoNum];
         dialogueActivated = true;
         
     }
@@ -206,6 +208,21 @@ public class AdvancedDialogueManager : MonoBehaviour
         // let player move again
         player.interactionActivated = false;
         Debug.Log("Ended convo:" + currentConversation);
+    }
+
+    public void UpdateQuest()
+    {
+        if (currentConversation.quest != null)
+        {
+            Debug.Log("Updating quest...");
+            var npc = currentConversation.quest.originNPC;
+            Debug.Log(npc);
+
+            var questHandler = GameObject.Find(npc.ToString()).transform.Find("QuestHandler").GetComponent<QuestHandler>();
+            Debug.Log(questHandler);
+            questHandler.UpdateQuestStatus(currentConversation.updatedQuestStatus);
+
+        }
     }
 }
 

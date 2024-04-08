@@ -13,6 +13,7 @@ public class QuestHandler : MonoBehaviour
     void Start()
     {
         status = QuestStatus.Inactive;
+        //quest.status = QuestStatus.Inactive;
         connectionBar = GameObject.Find("ConnectionBar").GetComponent<ConnectionBar>();
     }
 
@@ -24,9 +25,14 @@ public class QuestHandler : MonoBehaviour
 
     }
 
-    public void UpdateQuestStatus(int qStatus)
+    public void UpdateQuestStatus(QuestStatus qStatus)
     {
-        status = (QuestStatus) qStatus;
+        status = qStatus;
+    }
+
+    public int CheckQuestStatus()
+    {
+        return (int) status;
     }
 
 

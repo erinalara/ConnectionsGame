@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9da1bc3d27925bd438e5cf6d175ac213, type: 3}
+  m_Name: IntroConversation
+  m_EditorClassIdentifier: 
+  actors: 0400000002000000
+  randomActorName: 
+  dialogue:
+  - Hey! Are you the one that moved in last night?
+  optionText:
+  - Yup! Just moved in the other day!
+  - No, I think that was some other person.
+  option0: {fileID: 11400000, guid: 231ba2cb887eed845b21a81264bc8c4d, type: 2}
+  option1: {fileID: 11400000, guid: 3d38a2948757bcc4b846f8e3aaa25e61, type: 2}
+  option2: {fileID: 0}
+  updatedQuestStatus: 0
+  quest: {fileID: 0}
