@@ -70,8 +70,8 @@ public class PlayerController : MonoBehaviour
     public void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "FloorExit")
-        {
-            tLoader.StartTransition();
+        {            
+            tLoader.StartTransition(collision.gameObject.name);
         }
         
     }
