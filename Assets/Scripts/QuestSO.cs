@@ -12,6 +12,8 @@ public class QuestSO : ScriptableObject
     // NPC that authored the quest/request
     public DialogueActors originNPC;
 
+    public QuestStatus status;
+
 
 
     [Tooltip("Only needed for Scavenger quests")]
@@ -22,6 +24,7 @@ public class QuestSO : ScriptableObject
     [Header("Word Info")]
 
     public int wordChoiceValueNum;
+
 
 
 }

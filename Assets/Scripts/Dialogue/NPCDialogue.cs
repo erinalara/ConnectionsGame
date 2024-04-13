@@ -19,7 +19,9 @@ public class NPCDialogue : MonoBehaviour
         advancedDialogueManager = GameObject.Find("DialogueManager").GetComponent<AdvancedDialogueManager>();
         
         var npc = this.transform.parent.gameObject;
-        questHandler = npc.transform.Find("QuestHandler").GetComponent<QuestHandler>();
+        var obj = npc.transform.Find("QuestHandler");
+        if (obj)
+            questHandler = obj.GetComponent<QuestHandler>();
              
     }
 
@@ -36,10 +38,12 @@ public class NPCDialogue : MonoBehaviour
 
             // check quest status
             int convoNum = (questHandler == null) ? 0: questHandler.CheckQuestStatus();
-
+            if (convoNum > conversation.Length-1)
+                convoNum = 0;
             // initiate convo
             advancedDialogueManager.InitiateDialogue(this, convoNum);
             dialogueInitiated = true;
+            
         }
     }
 

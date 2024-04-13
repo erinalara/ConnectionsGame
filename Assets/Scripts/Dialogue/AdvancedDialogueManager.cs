@@ -80,9 +80,8 @@ public class AdvancedDialogueManager : MonoBehaviour
             // cancel dialogue
             if (stepNum >= currentConversation.actors.Length)
             {
-                // Update quest status if needed
-                UpdateQuest();
                 TurnOffDialogue();
+                UpdateQuest();
             }
             // continue dialogue
             else          
@@ -211,19 +210,24 @@ public class AdvancedDialogueManager : MonoBehaviour
     }
 
     public void UpdateQuest()
-    {
+    {   
         if (currentConversation.quest != null)
         {
+            if (currentConversation.quest.status == QuestStatus.Completed)
+            {
+                Debug.Log("CUE QUEST COMPLETION EFFECT");
+            }
+            
             Debug.Log("Updating quest...");
             var npc = currentConversation.quest.originNPC;
-            Debug.Log(npc);
 
             var questHandler = GameObject.Find(npc.ToString()).transform.Find("QuestHandler").GetComponent<QuestHandler>();
-            Debug.Log(questHandler);
             questHandler.UpdateQuestStatus(currentConversation.updatedQuestStatus);
-
+            
         }
     }
+
+ 
 }
 
 public enum DialogueActors

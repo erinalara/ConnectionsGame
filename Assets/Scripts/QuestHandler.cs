@@ -5,7 +5,7 @@ using UnityEngine;
 public class QuestHandler : MonoBehaviour
 {
     public QuestSO quest;
-    private QuestStatus status;
+    //private QuestStatus status;
     private ConnectionBar connectionBar;
 
     // 
@@ -15,28 +15,61 @@ public class QuestHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        status = QuestStatus.Inactive;
-        //quest.status = QuestStatus.Inactive;
+        UpdateQuestStatus(QuestStatus.Inactive);
         connectionBar = GameObject.Find("ConnectionBar").GetComponent<ConnectionBar>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (status == QuestStatus.Completed)
+        if (quest.status == QuestStatus.Completed)
             connectionBar.AddQuest();
 
     }
 
     public void UpdateQuestStatus(QuestStatus qStatus)
     {
-        status = qStatus;
+        quest.status = qStatus;
+        if (quest.qType == QuestType.WordChoice && qStatus == QuestStatus.InProgress)
+        {
+            // activate word chouce quest
+            ActivateWordQuest();
+        }
     }
 
     public int CheckQuestStatus()
     {
-        return (int) status;
+        return (int) quest.status;
     }
+
+    public void ActivateWordQuest()
+    {
+        //
+    }
+
+    /*private void OnTriggerStay2D(Collider2D collision)
+    {
+
+        if (collision.gameObject.tag == "Player" && quest.qType == QuestType.WordChoice)
+        {
+            // Start Word Choice Scenes
+            
+        }
+        
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player" && quest.qType == QuestType.WordChoice)
+        {
+            // update quest status
+
+        }
+        else if (collision.gameObject.tag == "Player" && quest.qType == QuestType.Scavenger)
+        {
+            // Add found item to inventory (?)
+        }
+    }*/
 
 
 }
@@ -51,5 +84,6 @@ public enum QuestStatus
 {
     Inactive,
     InProgress,
-    Completed
+    Completed,
+    Ended
 };

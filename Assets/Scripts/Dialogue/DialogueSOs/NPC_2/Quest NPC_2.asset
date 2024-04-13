@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   qType: 0
   originNPC: 4
+  status: 1
   itemName: 
   wordChoiceValueNum: 0
