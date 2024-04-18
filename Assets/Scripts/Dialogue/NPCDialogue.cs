@@ -5,11 +5,19 @@ using UnityEngine;
 public class NPCDialogue : MonoBehaviour
 {
     public AdvancedDialogueSO[] conversation;
+    public Sprite positionLeft;
+    public Sprite positionRight;
+    public Sprite positionTop;
+    public Sprite positionBottom;
+
 
     private Transform player;
     private PlayerController p_controller;
     private AdvancedDialogueManager advancedDialogueManager;
     private bool dialogueInitiated;
+    private SpriteRenderer spriteRenderer;
+    private GameObject npc;
+
 
     private QuestHandler questHandler;
 
@@ -17,8 +25,8 @@ public class NPCDialogue : MonoBehaviour
     void Start()
     {
         advancedDialogueManager = GameObject.Find("DialogueManager").GetComponent<AdvancedDialogueManager>();
-        
-        var npc = this.transform.parent.gameObject;
+        npc = this.transform.parent.gameObject;
+        spriteRenderer = npc.GetComponent<SpriteRenderer>();
         var obj = npc.transform.Find("QuestHandler");
         if (obj)
             questHandler = obj.GetComponent<QuestHandler>();
@@ -33,9 +41,6 @@ public class NPCDialogue : MonoBehaviour
             //int convoNum = 0;
             player = collision.gameObject.GetComponent<Transform>();
 
-            // Check player direction
-
-
             // check quest status
             int convoNum = (questHandler == null) ? 0: questHandler.CheckQuestStatus();
             if (convoNum > conversation.Length-1)
@@ -43,7 +48,9 @@ public class NPCDialogue : MonoBehaviour
             // initiate convo
             advancedDialogueManager.InitiateDialogue(this, convoNum);
             dialogueInitiated = true;
-            
+            // Check player direction
+            //ChangeDirection(player, npc_sprite);
+
         }
     }
 
@@ -53,7 +60,23 @@ public class NPCDialogue : MonoBehaviour
         {           
             //advancedDialogueManager.TurnOffDialogue();
             dialogueInitiated = false;
+            spriteRenderer.sprite = positionBottom;
 
         }
+    }
+
+    public void ChangeDirection()
+    {
+        Transform npc_sprite = npc.GetComponent<Transform>();
+        float xdiff = Mathf.Abs(npc_sprite.position.x - player.position.x);
+        float ydiff = Mathf.Abs(npc_sprite.position.y - player.position.y);
+        Debug.Log(xdiff+ " " + ydiff);
+        if (npc_sprite.position.x >= player.position.x && xdiff > ydiff)
+            spriteRenderer.sprite = positionLeft;
+        else if (npc_sprite.position.x <= player.position.x && xdiff > ydiff)
+            spriteRenderer.sprite = positionRight;
+        else if (npc_sprite.position.y <= player.position.y && xdiff < ydiff)
+            spriteRenderer.sprite = positionTop;
+        
     }
 }

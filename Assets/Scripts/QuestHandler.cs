@@ -10,26 +10,34 @@ public class QuestHandler : MonoBehaviour
 
     // 
     private int currentQuestNum;
+    private bool hasFinished;
 
 
     // Start is called before the first frame update
     void Start()
     {
         UpdateQuestStatus(QuestStatus.Inactive);
-        connectionBar = GameObject.Find("ConnectionBar").GetComponent<ConnectionBar>();
+        connectionBar = GameObject.Find("ProgressBar").GetComponent<ConnectionBar>();
+        hasFinished = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (quest.status == QuestStatus.Completed)
-            connectionBar.AddQuest();
+
+        
 
     }
 
     public void UpdateQuestStatus(QuestStatus qStatus)
     {
         quest.status = qStatus;
+        if (!hasFinished && quest.status == QuestStatus.Ended)
+        {
+            connectionBar.UpdateBar();
+            hasFinished = true;
+        }
+
         if (quest.qType == QuestType.WordChoice && qStatus == QuestStatus.InProgress)
         {
             // activate word chouce quest

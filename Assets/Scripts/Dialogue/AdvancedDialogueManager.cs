@@ -35,6 +35,7 @@ public class AdvancedDialogueManager : MonoBehaviour
     
 
     private PlayerController player;
+    private NPCDialogue npcDialogue;
 
     // Start is called before the first frame update
     void Start()
@@ -72,6 +73,9 @@ public class AdvancedDialogueManager : MonoBehaviour
     {
         if (dialogueActivated && Input.GetButtonDown("Interact") && canContinueText)
         {
+            // Change NPC direction
+            npcDialogue.ChangeDirection();
+
             Debug.Log("started convo:" + currentConversation);
 
             // restrict player movement
@@ -195,6 +199,7 @@ public class AdvancedDialogueManager : MonoBehaviour
 
         currentConversation = npcDialogue.conversation[convoNum];
         dialogueActivated = true;
+        this.npcDialogue = npcDialogue;
         
     }
 
