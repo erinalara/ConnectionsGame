@@ -24,7 +24,12 @@ public class PlayerController : MonoBehaviour
     {
         // ProcessInputs();
         if (!interactionActivated)
+        {
+            animator.SetBool("interactionActivated", false);
             Move();
+        }
+        else if (interactionActivated)
+            animator.SetBool("interactionActivated", true);
         
     }
 
@@ -42,6 +47,11 @@ public class PlayerController : MonoBehaviour
     {
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
+        if (horizontal != 0 && vertical != 0)
+        {
+            horizontal = 0f;
+            vertical = 0f;
+        }
         animator.SetFloat("Horizontal", horizontal);
         animator.SetFloat("Vertical", vertical);
 
