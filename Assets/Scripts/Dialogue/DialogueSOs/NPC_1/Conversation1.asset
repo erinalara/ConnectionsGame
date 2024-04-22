@@ -12,18 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9da1bc3d27925bd438e5cf6d175ac213, type: 3}
   m_Name: Conversation1
   m_EditorClassIdentifier: 
-  actors: 030000000300000000000000030000000300000002000000
+  actors: 0300000003000000030000000300000002000000
   randomActorName: 
   dialogue:
-  - (Stupid stupid stupid, why I oughta-)
-  - Oh! Hello!
-  - Hi there!
-  - You look familiar.
-  - Have I seen you before?
+  - You're the new resident right? (It's like only weirdos move here...)
+  - Though, I did hear that you were actually from this town originally, so I guess
+    you can't really say you're 'new' anyways.
+  - (What lunatic would want to move back he-)
+  - Wait. Now that I look at you, you look familiar. Do I know you?
   optionText:
-  - I don't think so.
-  - Yeah, you used to bully me in elementary school..
-  - Don't know, don't care.
+  - I don't think so...
+  - ...you used to call me Coconut Head...
   option0: {fileID: 11400000, guid: e8858bd873db8e448b4831e52f02e153, type: 2}
   option1: {fileID: 11400000, guid: 454655fc6ea7e3548ad8220c0ae03bb8, type: 2}
-  option2: {fileID: 11400000, guid: 965c15b8df948e54b8c727ae5cb4837d, type: 2}
+  option2: {fileID: 0}
+  updatedQuestStatus: 0
+  quest: {fileID: 0}
