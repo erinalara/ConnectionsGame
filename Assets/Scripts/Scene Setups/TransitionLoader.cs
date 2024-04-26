@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System;
+using System.Linq;
 
 
 public class TransitionLoader : MonoBehaviour
@@ -35,6 +36,20 @@ public class TransitionLoader : MonoBehaviour
         TransitionScenes nextScene = (TransitionScenes) Enum.Parse(typeof(TransitionScenes), scene);
         return ((int) nextScene);
     }
+
+    public TransitionScenes GetCurrentScene()
+    {
+        return (TransitionScenes) SceneManager.GetActiveScene().buildIndex;
+    }
+
+    // Checks if scene is a map (requiring camera movement)
+    public bool IsMapScene()
+    {
+        int scene = (int) GetCurrentScene();
+        int[] maps = {3, 4};
+        return maps.Contains(scene);
+
+    }
 }
 
 public enum TransitionScenes
@@ -44,12 +59,12 @@ public enum TransitionScenes
     PlayerHome,
     NeighborhoodScene,
     TownScene,
+    NHouse1,
     MartScene, 
     Building_1,
     Building_2,
     Building_3,
     Building_4,
-    NHouse1,
     NHouse2,
 
 };

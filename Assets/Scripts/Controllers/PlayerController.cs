@@ -105,8 +105,11 @@ public class PlayerController : MonoBehaviour
     {
         Vector2 pos = playerManager.GetPosition();
         transform.position = pos;
-        var cam = GameObject.Find("Main Camera");
-        cam.transform.position = pos;
+        if (tLoader.GetCurrentScene() != TransitionScenes.PlayerHome)
+        {
+            var cam = GameObject.Find("Main Camera");
+            cam.transform.position = new Vector3(pos.x, pos.y, cam.transform.position.z);
+        }
     }
 
 
