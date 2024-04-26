@@ -19,7 +19,7 @@ public class CameraFollow : MonoBehaviour
 
     void Start()
     {
-
+        
         cam = GetComponent<Camera>();
         var cameraHeight = 2f * cam.orthographicSize;
         var cameraWidth = cameraHeight * cam.aspect;
@@ -34,6 +34,7 @@ public class CameraFollow : MonoBehaviour
 
         minPosition = new Vector2(minPositionX, minPositionY);
         maxPosition = new Vector2(maxPositionX, maxPositionY);
+        
 
     }
 

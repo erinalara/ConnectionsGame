@@ -6,13 +6,20 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 
 {
+    //public static PlayerController Instance { get; private set; }
     public TransitionLoader tLoader;
     public Animator animator;
 
     public bool interactionActivated;
+
+    private PlayerManager playerManager;
+    private Vector2 position;
     // Start is called before the first frame update
     void Start()
     {
+        playerManager = GameObject.Find("PlayerManager").GetComponent<PlayerManager>();
+        if (playerManager) 
+            InitializePosition();
         GameObject cam = GameObject.FindGameObjectWithTag("CamBounds");
         if (cam) 
             Physics2D.IgnoreCollision(cam.GetComponent<BoxCollider2D>(), GetComponent<BoxCollider2D>());
@@ -35,7 +42,15 @@ public class PlayerController : MonoBehaviour
 
     void Awake()
     {
-        DontDestroyOnLoad(this.gameObject);
+        /*if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else if (Instance != this)
+        {
+            Destroy(this);
+        }*/
     }
 
     /*void ProcessInputs()
@@ -58,7 +73,7 @@ public class PlayerController : MonoBehaviour
         float sq = (float)Math.Sqrt((Math.Pow(horizontal, 2) + Math.Pow(vertical, 2)));
         animator.SetFloat("Speed", sq);
         
-        Vector2 position = transform.position;
+        position = transform.position;
         if (horizontal != 0)
         {
             position.x = position.x + 3f * horizontal * Time.deltaTime;
@@ -73,7 +88,6 @@ public class PlayerController : MonoBehaviour
             animator.SetFloat("lastH", horizontal);
             animator.SetFloat("lastV", vertical);
         }
-
         transform.position = position;
     }
 
@@ -82,10 +96,19 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag == "FloorExit")
         {            
             tLoader.StartTransition(collision.gameObject.name);
+            playerManager.SetPosition(position);
         }
         
     }
 
-    
+    void InitializePosition()
+    {
+        Vector2 pos = playerManager.GetPosition();
+        transform.position = pos;
+        var cam = GameObject.Find("Main Camera");
+        cam.transform.position = pos;
+    }
+
+
 
 }

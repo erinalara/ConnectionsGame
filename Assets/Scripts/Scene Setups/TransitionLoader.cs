@@ -43,6 +43,7 @@ public enum TransitionScenes
     IntroScene,
     PlayerHome,
     NeighborhoodScene,
+    TownScene,
     MartScene, 
     Building_1,
     Building_2,
