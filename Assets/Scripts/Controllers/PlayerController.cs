@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     //public static PlayerController Instance { get; private set; }
     public TransitionLoader tLoader;
     public Animator animator;
+    public float speed;
 
     public bool interactionActivated;
 
@@ -24,6 +25,8 @@ public class PlayerController : MonoBehaviour
         if (cam) 
             Physics2D.IgnoreCollision(cam.GetComponent<BoxCollider2D>(), GetComponent<BoxCollider2D>());
         interactionActivated = false;
+        speed = 5f;
+        
     }
 
     // Update is called once per frame
@@ -76,12 +79,12 @@ public class PlayerController : MonoBehaviour
         position = transform.position;
         if (horizontal != 0)
         {
-            position.x = position.x + 3f * horizontal * Time.deltaTime;
+            position.x = position.x + speed * horizontal * Time.deltaTime;
 
         }
         else if (vertical != 0)
         {
-            position.y = position.y + 3f * vertical * Time.deltaTime;
+            position.y = position.y + speed * vertical * Time.deltaTime;
         }
         if (horizontal != 0 ||  vertical != 0)
         {
@@ -105,8 +108,9 @@ public class PlayerController : MonoBehaviour
     {
         Vector2 pos = playerManager.GetPosition();
         transform.position = pos;
-        if (tLoader.GetCurrentScene() != TransitionScenes.PlayerHome)
-        {
+        int curr = (int) tLoader.GetCurrentScene();
+        if ((curr == 3) || (curr == 4))
+        {   
             var cam = GameObject.Find("Main Camera");
             cam.transform.position = new Vector3(pos.x, pos.y, cam.transform.position.z);
         }

@@ -11088,6 +11088,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tLoader: {fileID: 2108592484213532450}
   animator: {fileID: 1123633123}
+  speed: 4.5
   interactionActivated: 0
 --- !u!212 &1123633125
 SpriteRenderer:
@@ -15244,7 +15245,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transition: {fileID: 9009004718258165303}
-  transitionTime: 1
+  transitionTime: -0.28
 --- !u!212 &3626916397785495959
 SpriteRenderer:
   m_ObjectHideFlags: 0

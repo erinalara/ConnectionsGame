@@ -11246,6 +11246,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tLoader: {fileID: 2108592484213532450}
   animator: {fileID: 1123633123}
+  speed: 4.5
   interactionActivated: 0
 --- !u!212 &1123633125
 SpriteRenderer:

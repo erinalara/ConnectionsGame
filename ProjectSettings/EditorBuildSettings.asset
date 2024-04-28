@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/NHouse1.unity
     guid: 3db92f264e41cff47a3332830315589a
+  - enabled: 1
+    path: Assets/Scenes/MartScene.unity
+    guid: 5e613acd09d6a0f43898e8ae2b9559d9
   m_configObjects: {}

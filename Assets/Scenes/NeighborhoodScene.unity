@@ -825,7 +825,7 @@ Camera:
   far clip plane: 999.59
   field of view: 54.9
   orthographic: 1
-  orthographic size: 8.65
+  orthographic size: 8.565882
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1483,6 +1483,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tLoader: {fileID: 1177446029736075686}
   animator: {fileID: 727928246}
+  speed: 4.5
   interactionActivated: 0
 --- !u!212 &727928248
 SpriteRenderer:
@@ -13932,7 +13933,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.1163249, y: -2.8977737}
+  m_Offset: {x: -0.10404587, y: -2.2931142}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -13943,7 +13944,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.3722048, y: 0.56699944}
+  m_Size: {x: 0.8810406, y: 0.25204468}
   m_EdgeRadius: 0
 --- !u!50 &886178176
 Rigidbody2D:
@@ -15912,8 +15913,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 7
---- !u!61 &959007154
-BoxCollider2D:
+--- !u!60 &959007154
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -15944,7 +15945,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.12894535, y: -0.11993933}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -15954,9 +15955,26 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 6.6474075, y: 4.494672}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 2.997075, y: 2.0871696}
+      - {x: 0.046509743, y: 2.2512712}
+      - {x: -3.4611855, y: 2.0913649}
+      - {x: -3.4229708, y: 1.9607077}
+      - {x: -3.4505663, y: 1.8357077}
+      - {x: -3.2746696, y: -2.0056581}
+      - {x: -3.2674532, y: -2.5289607}
+      - {x: -0.80867195, y: -2.5753336}
+      - {x: -0.7277441, y: -2.6097946}
+      - {x: -0.7071037, y: -1.3836284}
+      - {x: 0.36586475, y: -1.3237753}
+      - {x: 0.5113187, y: -2.6515517}
+      - {x: 0.5577712, y: -2.608914}
+      - {x: 3.0174532, y: -2.576933}
+      - {x: 3.0915565, y: -2.6467443}
+      - {x: 3.0886316, y: -0.5305195}
+      - {x: 3.120613, y: 2.0465097}
+  m_UseDelaunayMesh: 0
 --- !u!1 &975094974
 GameObject:
   m_ObjectHideFlags: 0
@@ -21230,7 +21248,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transition: {fileID: 1754398539855811445}
-  transitionTime: 1
+  transitionTime: -0.8
 --- !u!95 &1754398539855811445
 Animator:
   serializedVersion: 5
