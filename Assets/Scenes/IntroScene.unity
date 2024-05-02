@@ -698,16 +698,9 @@ MonoBehaviour:
   textComponent: {fileID: 379823819}
   tLoader: {fileID: 1177446029605937335}
   lines:
-  - 'This town gets nicer year after year. '
-  - As for some of the locals here ...
-  - Let's just say it's quite humbling to see some tokens of kindness here and there.
-  - But don't let that scare you. Sometimes I like to think of this town as life
-    itself, all the good sprinkled in with all the bad.
-  - Oh?
-  - It's not your first time here?
-  - So sorry! Well, in that case, it's great to have you back.
-  - Even though many things have probably changed, I'm sure you'll find a sense of
-    familiarity as time passes..
+  - No one would've expected it to go like this.
+  - Tomorrow is a new day, a fresh start.
+  - Hopefully I can find what I had lost along the way.
   textSpeed: 0.05
   startDelay: 4
 --- !u!114 &1898114298

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9af37a7f3c2773b4080172e7152bd989
+guid: 3e93b23b39cb2614e8f88b7870799d51
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -35,7 +35,7 @@ ScriptedImporter:
     spriteMeshType: 1
     alignment: 0
     spritePivot: {x: 0.5, y: 0.5}
-    spritePixelsToUnits: 100
+    spritePixelsToUnits: 16
     spriteBorder: {x: 0, y: 0, z: 0, w: 0}
     spriteGenerateFallbackPhysicsShape: 0
     generateCubemap: 6
@@ -119,18 +119,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: grassv3
+  - name: siltest 1
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.46308723, y: 0.0077519384}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 48
-      height: 48
-    spriteID: b1168be8fced7ab46a4c8f993cfc8b46
+      width: 149
+      height: 129
+    spriteID: 7be9ddda3a953ea48a081a739d87da1a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -139,203 +139,23 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  spriteSheetImportData:
-  - name: grassv3_0
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 36
-      width: 16
-      height: 16
-    spriteID: 16ddef6b66e37dd4d9547da114e0f6de
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 0, y: 0}
-  - name: grassv3_1
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 20
-      y: 36
-      width: 16
-      height: 16
-    spriteID: e578f6722c5909a4ea95af90260dc4ca
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 0, y: 0}
-  - name: grassv3_2
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 36
-      y: 36
-      width: 16
-      height: 16
-    spriteID: b2b79ced0738b504180010bd4a4f3190
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 0, y: 0}
-  - name: grassv3_3
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 20
-      width: 16
-      height: 16
-    spriteID: e47f173efc1e20f498d4546aea5db460
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 0, y: 0}
-  - name: grassv3_4
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 20
-      y: 20
-      width: 16
-      height: 16
-    spriteID: e8699f29ab208014db623e9ff9934b55
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 0, y: 0}
-  - name: grassv3_5
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 36
-      y: 20
-      width: 16
-      height: 16
-    spriteID: 77008911a73fb9c43a762af2e113de92
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 0, y: 0}
-  - name: grassv3_6
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 4
-      width: 16
-      height: 16
-    spriteID: eb47949cd1a63884ca0638d2f7566ad1
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 0, y: 0}
-  - name: grassv3_7
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 20
-      y: 4
-      width: 16
-      height: 16
-    spriteID: 7e7d2fa89f7c4ae4f846c0dbba2c04f6
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 0, y: 0}
-  - name: grassv3_8
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    rect:
-      serializedVersion: 2
-      x: 36
-      y: 4
-      width: 16
-      height: 16
-    spriteID: c9a60a85a43831e4b88b0f5756650384
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 0, y: 0}
+  spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1084307047
-    name: grassv3
+    guid: -1140490435
+    name: siltest 1
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: grassv3
+    - name: siltest 1
       frameIndex: 0
       cellRect:
-        x: 0
-        y: 0
-        width: 48
-        height: 48
-      spriteId: b1168be8fced7ab46a4c8f993cfc8b46
+        x: 11
+        y: -1
+        width: 149
+        height: 129
+      spriteId: 7be9ddda3a953ea48a081a739d87da1a
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -389,4 +209,4 @@ ScriptedImporter:
     androidETC2FallbackOverride: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 48, y: 48}
+  canvasSize: {x: 160, y: 144}
