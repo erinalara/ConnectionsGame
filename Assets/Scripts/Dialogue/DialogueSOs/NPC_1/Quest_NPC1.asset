@@ -16,4 +16,5 @@ MonoBehaviour:
   originNPC: 3
   status: 0
   itemName: Pooh
-  wordChoiceValueNum: 0
+  answerResults: 
+  questions: []

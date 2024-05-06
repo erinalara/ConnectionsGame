@@ -70,7 +70,6 @@ public class NPCDialogue : MonoBehaviour
         Transform npc_sprite = npc.GetComponent<Transform>();
         float xdiff = Mathf.Abs(npc_sprite.position.x - player.position.x);
         float ydiff = Mathf.Abs(npc_sprite.position.y - player.position.y);
-        Debug.Log(xdiff+ " " + ydiff);
         if (npc_sprite.position.x >= player.position.x && xdiff > ydiff)
             spriteRenderer.sprite = positionLeft;
         else if (npc_sprite.position.x <= player.position.x && xdiff > ydiff)

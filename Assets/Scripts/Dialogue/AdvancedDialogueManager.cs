@@ -85,7 +85,7 @@ public class AdvancedDialogueManager : MonoBehaviour
             if (stepNum >= currentConversation.actors.Length)
             {
                 TurnOffDialogue();
-                UpdateQuest();
+                //UpdateQuest();
             }
             // continue dialogue
             else          
@@ -140,6 +140,7 @@ public class AdvancedDialogueManager : MonoBehaviour
         dialogueCanvas.SetActive(true);
         stepNum+=1;
 
+
     }
 
     void SetActorInfo(bool recurringCharacter)
@@ -172,6 +173,7 @@ public class AdvancedDialogueManager : MonoBehaviour
         if (optionNum == 2)
             currentConversation = currentConversation.option2;
         stepNum = 0;
+        UpdateQuest();
 
     }
 
@@ -227,7 +229,7 @@ public class AdvancedDialogueManager : MonoBehaviour
             var npc = currentConversation.quest.originNPC;
 
             var questHandler = GameObject.Find(npc.ToString()).transform.Find("QuestHandler").GetComponent<QuestHandler>();
-            questHandler.UpdateQuestStatus(currentConversation.updatedQuestStatus);
+            questHandler.UpdateQuestStatus(currentConversation.updatedQuestStatus, currentConversation.userChoice);
             
         }
     }

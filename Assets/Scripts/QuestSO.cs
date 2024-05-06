@@ -23,7 +23,9 @@ public class QuestSO : ScriptableObject
     [Tooltip("Only needed for Word quests")]
     [Header("Word Info")]
 
-    public int wordChoiceValueNum;
+    //public WordQuestType wordQuestType;
+    public List<WordQuestType> answerResults;
+    public AdvancedDialogueSO survey;
 
 
 

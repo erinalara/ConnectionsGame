@@ -11,12 +11,13 @@ public class QuestHandler : MonoBehaviour
     // 
     private int currentQuestNum;
     private bool hasFinished;
+    //private string[] wordChoiceValues;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        UpdateQuestStatus(QuestStatus.Inactive);
+        UpdateQuestStatus(QuestStatus.Inactive, WordQuestType.None);
         connectionBar = GameObject.Find("ProgressBar").GetComponent<ConnectionBar>();
         hasFinished = false;
     }
@@ -29,7 +30,7 @@ public class QuestHandler : MonoBehaviour
 
     }
 
-    public void UpdateQuestStatus(QuestStatus qStatus)
+    public void UpdateQuestStatus(QuestStatus qStatus, WordQuestType userChoice )
     {
         quest.status = qStatus;
         if (!hasFinished && quest.status == QuestStatus.Ended)
@@ -38,10 +39,14 @@ public class QuestHandler : MonoBehaviour
             hasFinished = true;
         }
 
-        if (quest.qType == QuestType.WordChoice && qStatus == QuestStatus.InProgress)
+        if (quest.qType == QuestType.WordChoice)
         {
-            // activate word chouce quest
-            ActivateWordQuest();
+            if (userChoice != WordQuestType.None && quest.status != QuestStatus.Completed)
+                quest.answerResults.Add(userChoice);
+            else if (quest.Status == QuestStatus.Completed)
+
+            
+            
         }
     }
 
@@ -50,10 +55,11 @@ public class QuestHandler : MonoBehaviour
         return (int) quest.status;
     }
 
-    public void ActivateWordQuest()
+    public void EvaluateWordResults()
     {
         //
     }
+
 
     /*private void OnTriggerStay2D(Collider2D collision)
     {
@@ -94,4 +100,17 @@ public enum QuestStatus
     InProgress,
     Completed,
     Ended
+};
+
+public enum WordQuestType
+{
+    None,
+    Introvert,
+    Extrovert,
+    Sensor,
+    Intuitive,
+    Feeler,
+    Thinker,
+    Perceiver,
+    Judger
 };

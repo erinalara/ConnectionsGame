@@ -108,9 +108,9 @@ public class PlayerController : MonoBehaviour
     {
         Vector2 pos = playerManager.GetPosition();
         transform.position = pos;
-        int curr = (int) tLoader.GetCurrentScene();
-        if ((curr == 3) || (curr == 4))
-        {   
+        TransitionScenes curr = tLoader.GetCurrentScene();
+        if ((curr == TransitionScenes.NeighborhoodScene) || (curr == TransitionScenes.TownScene))
+        {
             var cam = GameObject.Find("Main Camera");
             cam.transform.position = new Vector3(pos.x, pos.y, cam.transform.position.z);
         }

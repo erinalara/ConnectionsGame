@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9da1bc3d27925bd438e5cf6d175ac213, type: 3}
+  m_Name: Q1a
+  m_EditorClassIdentifier: 
+  actors: 0500000002000000
+  randomActorName: 
+  dialogue:
+  - 'In group settings, do you tend to:'
+  optionText:
+  - Feel more comfortable observing and listening before actively participating in
+    conversations?
+  - Feel energized by interacting with others and enjoy being in the center of attention?
+  option0: {fileID: 11400000, guid: de888f2f427406e4cae2483758eb701b, type: 2}
+  option1: {fileID: 11400000, guid: 3d5217c34d898be498b8cae1bc902a65, type: 2}
+  option2: {fileID: 0}
+  updatedQuestStatus: 1
+  userChoice: 1
+  quest: {fileID: 11400000, guid: 8d9aee917e8a69e4ba119887363630d5, type: 2}

@@ -24,6 +24,7 @@ public class AdvancedDialogueSO : ScriptableObject
     public AdvancedDialogueSO option2;
 
     public QuestStatus updatedQuestStatus;
+    public WordQuestType userChoice;
     public QuestSO quest;
 
 

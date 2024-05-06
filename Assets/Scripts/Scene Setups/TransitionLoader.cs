@@ -46,7 +46,7 @@ public class TransitionLoader : MonoBehaviour
     public bool IsMapScene()
     {
         int scene = (int) GetCurrentScene();
-        int[] maps = {3, 4};
+        int[] maps = {4, 5};
         return maps.Contains(scene);
 
     }
@@ -56,6 +56,7 @@ public enum TransitionScenes
 {
     MainScene,
     IntroScene,
+    TutorialHomeScreen,
     PlayerHome,
     NeighborhoodScene,
     TownScene,
