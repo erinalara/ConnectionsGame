@@ -85,10 +85,14 @@ public class AdvancedDialogueManager : MonoBehaviour
             if (stepNum >= currentConversation.actors.Length)
             {
                 TurnOffDialogue();
-                //UpdateQuest();
+                var x = CheckQuest();
+                if (x)
+                    UpdateQuest();
             }
+            
+
             // continue dialogue
-            else          
+            else
                 PlayDialogue();
           
         }   
@@ -132,6 +136,7 @@ public class AdvancedDialogueManager : MonoBehaviour
         if (typeRoutine != null)
             StopCoroutine(typeRoutine);
 
+
         if (stepNum < currentConversation.dialogue.Length)
             typeRoutine = StartCoroutine(TypeWriterEffect(dialogueText.text = currentConversation.dialogue[stepNum]));
         else
@@ -139,6 +144,7 @@ public class AdvancedDialogueManager : MonoBehaviour
 
         dialogueCanvas.SetActive(true);
         stepNum+=1;
+
 
 
     }
@@ -234,7 +240,18 @@ public class AdvancedDialogueManager : MonoBehaviour
         }
     }
 
- 
+    public bool CheckQuest()
+    {
+        var npc = currentConversation.quest.originNPC;
+        var questHandler = GameObject.Find(npc.ToString()).transform.Find("QuestHandler").GetComponent<QuestHandler>();
+        int qType = questHandler.CheckQuestType();
+        if (qType == 0)
+            return true;
+        return false;
+
+    }
+
+
 }
 
 public enum DialogueActors

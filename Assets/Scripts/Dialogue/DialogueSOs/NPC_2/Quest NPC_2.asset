@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   qType: 0
   originNPC: 4
-  status: 1
-  itemName: 
-  wordChoiceValueNum: 0
+  status: 0
+  itemName: Bush
+  answerResults: 
+  survey: {fileID: 0}

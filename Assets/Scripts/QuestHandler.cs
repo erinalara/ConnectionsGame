@@ -17,9 +17,14 @@ public class QuestHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        UpdateQuestStatus(QuestStatus.Inactive, WordQuestType.None);
-        connectionBar = GameObject.Find("ProgressBar").GetComponent<ConnectionBar>();
-        hasFinished = false;
+        var _cb = GameObject.Find("ConnectionBar");
+        connectionBar = _cb.transform.Find("BarCanvas/ProgressBar").GetComponent<ConnectionBar>();
+
+        if (!CheckBarQuests())
+        {
+            UpdateQuestStatus(QuestStatus.Inactive, WordQuestType.None);
+            hasFinished = false;
+        }
     }
 
     // Update is called once per frame
@@ -33,21 +38,31 @@ public class QuestHandler : MonoBehaviour
     public void UpdateQuestStatus(QuestStatus qStatus, WordQuestType userChoice )
     {
         quest.status = qStatus;
-        if (!hasFinished && quest.status == QuestStatus.Ended)
+        if (!hasFinished)
         {
-            connectionBar.UpdateBar();
-            hasFinished = true;
-        }
+            if (quest.qType == QuestType.Scavenger && quest.status == QuestStatus.Ended)
+            {
+                UpdateBar();
+            }
 
-        if (quest.qType == QuestType.WordChoice)
-        {
-            if (userChoice != WordQuestType.None && quest.status != QuestStatus.Completed)
-                quest.answerResults.Add(userChoice);
-            else if (quest.Status == QuestStatus.Completed)
+            else if (quest.qType == QuestType.WordChoice)
+            {
+                if (userChoice != WordQuestType.None && quest.status != QuestStatus.Inactive)
+                    quest.answerResults.Add(userChoice);
+                if (quest.status == QuestStatus.Completed)
+                {
+                    Debug.Log(EvaluateWordResults());
+                    UpdateBar();
+                }
 
-            
-            
+
+            }
         }
+    }
+
+    public int CheckQuestType()
+    {
+        return (int)quest.qType;
     }
 
     public int CheckQuestStatus()
@@ -55,9 +70,34 @@ public class QuestHandler : MonoBehaviour
         return (int) quest.status;
     }
 
-    public void EvaluateWordResults()
+    public WordQuestType EvaluateWordResults()
     {
-        //
+        List<int> num = new List<int>();
+        foreach(WordQuestType x in quest.answerResults)
+        {
+            int y = (int) x;
+            if (num.Contains(y))
+                return x;
+
+            else
+                num.Add(y);
+        }
+        return WordQuestType.None;
+
+    }
+
+    public void UpdateBar()
+    {
+        connectionBar.UpdateBar(quest);
+        hasFinished = true;
+    }
+
+    public bool CheckBarQuests()
+    {
+        var quests = connectionBar.GetCompleted();
+        if (quests.Contains(quest))
+            return true;
+        return false;
     }
 
 

@@ -9,6 +9,7 @@ public class ConnectionBar : MonoBehaviour
 {
     public Image mask;
     public QuestSO[] quests;
+    public List<QuestSO> questsCompleted;
 
     public int maximum;
     public int current;
@@ -28,8 +29,9 @@ public class ConnectionBar : MonoBehaviour
     }
 
 
-    public void UpdateBar()
+    public void UpdateBar(QuestSO quest)
     {
+        questsCompleted.Add(quest);
         current += 1;
     }
 
@@ -37,5 +39,10 @@ public class ConnectionBar : MonoBehaviour
     {
         float fillAmount = (float) current/ (float) maximum;
         mask.fillAmount = fillAmount;
+    }
+
+    public List<QuestSO> GetCompleted()
+    {
+        return questsCompleted;
     }
 }
