@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9da1bc3d27925bd438e5cf6d175ac213, type: 3}
+  m_Name: Q1a
+  m_EditorClassIdentifier: 
+  actors: 0b00000002000000
+  randomActorName: 
+  dialogue:
+  - Regarding the future you in 15 years, which do you wonder about more?
+  optionText:
+  - Who and where I'll be.
+  - If I met my life/career goals.
+  option0: {fileID: 11400000, guid: 4d6c0235ad162744185361aa4666c175, type: 2}
+  option1: {fileID: 11400000, guid: f64fbcba5a7653a4cb3c1746a3c76e63, type: 2}
+  option2: {fileID: 0}
+  updatedQuestStatus: 1
+  userChoice: 7
+  quest: {fileID: 11400000, guid: fcda399146e816b4e93ddb295585fa17, type: 2}

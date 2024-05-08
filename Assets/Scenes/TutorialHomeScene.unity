@@ -11188,6 +11188,13 @@ MonoBehaviour:
   quests:
   - {fileID: 11400000, guid: 01b707fd866a80344a02bf253998ae1f, type: 2}
   - {fileID: 11400000, guid: 8d9aee917e8a69e4ba119887363630d5, type: 2}
+  - {fileID: 11400000, guid: 0c17345734efaef41ae883fbeb504d2f, type: 2}
+  - {fileID: 11400000, guid: cae1702114a1c1a4e8dddadd5432a585, type: 2}
+  - {fileID: 11400000, guid: ccc2041ea2142dc4fb69acf62c07a955, type: 2}
+  - {fileID: 11400000, guid: eadf1104c3ee152418083023f34d7166, type: 2}
+  - {fileID: 11400000, guid: 3b7b2736af1b4104d9ea0ecb58df1bba, type: 2}
+  - {fileID: 11400000, guid: 1dac97fcee76c9440b2c0c6560da0624, type: 2}
+  - {fileID: 11400000, guid: fcda399146e816b4e93ddb295585fa17, type: 2}
   questsCompleted: []
   maximum: 2
   current: 0
