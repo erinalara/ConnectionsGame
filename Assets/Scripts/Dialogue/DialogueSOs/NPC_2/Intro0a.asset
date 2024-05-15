@@ -12,10 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9da1bc3d27925bd438e5cf6d175ac213, type: 3}
   m_Name: Intro0a
   m_EditorClassIdentifier: 
-  actors: 0000000004000000
+  actors: 04000000
   randomActorName: 
   dialogue:
-  - Sure!
   - Perfect! Recently, my sister and I went to the park for a walk, but we ended
     up losing her favorite toy along the way. Please let me know if you find it!
   optionText: []
@@ -23,4 +22,5 @@ MonoBehaviour:
   option1: {fileID: 0}
   option2: {fileID: 0}
   updatedQuestStatus: 1
+  userChoice: 0
   quest: {fileID: 11400000, guid: 01b707fd866a80344a02bf253998ae1f, type: 2}

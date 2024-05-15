@@ -20,9 +20,9 @@ public class QuestHandler : MonoBehaviour
         var _cb = GameObject.Find("ConnectionBar");
         connectionBar = _cb.transform.Find("BarCanvas/ProgressBar").GetComponent<ConnectionBar>();
 
-        if (!CheckBarQuests())
+        if (connectionBar == null | !CheckBarQuests())
         {
-            UpdateQuestStatus(QuestStatus.Inactive, WordQuestType.None);
+            EvaluateQuestStatus(QuestStatus.Inactive, WordQuestType.None);
             hasFinished = false;
         }
     }
@@ -35,9 +35,15 @@ public class QuestHandler : MonoBehaviour
 
     }
 
-    public void UpdateQuestStatus(QuestStatus qStatus, WordQuestType userChoice )
+    public void UpdateStatus(QuestStatus qStatus)
     {
         quest.status = qStatus;
+
+    }
+
+    public void EvaluateQuestStatus(QuestStatus qStatus, WordQuestType userChoice )
+    {
+        UpdateStatus(qStatus);
         if (!hasFinished)
         {
             if (quest.qType == QuestType.Scavenger && quest.status == QuestStatus.Ended)
@@ -47,16 +53,20 @@ public class QuestHandler : MonoBehaviour
 
             else if (quest.qType == QuestType.WordChoice)
             {
-                if (userChoice != WordQuestType.None && quest.status != QuestStatus.Inactive)
-                    quest.answerResults.Add(userChoice);
-                if (quest.status == QuestStatus.Completed)
-                {
-                    Debug.Log(EvaluateWordResults());
-                    UpdateBar();
-                }
-
-
+                UpdateWordQuest(qStatus, userChoice);
             }
+        }
+
+    }
+
+    public void UpdateWordQuest(QuestStatus qStatus, WordQuestType userChoice)
+    {
+        if (userChoice != WordQuestType.None && quest.status != QuestStatus.Inactive)
+            quest.answerResults.Add(userChoice);
+        if (quest.status == QuestStatus.Completed)
+        {
+            Debug.Log(EvaluateWordResults());
+            UpdateBar();
         }
     }
 

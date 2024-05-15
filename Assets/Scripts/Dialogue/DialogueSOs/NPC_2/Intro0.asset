@@ -12,10 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9da1bc3d27925bd438e5cf6d175ac213, type: 3}
   m_Name: Intro0
   m_EditorClassIdentifier: 
-  actors: 00000000040000000400000002000000
+  actors: 040000000400000002000000
   randomActorName: 
   dialogue:
-  - Yup! Just moved in the other day!
   - Wow! Welcome!
   - Say, can you do me a huuuuuge favor?
   optionText:
@@ -25,4 +24,5 @@ MonoBehaviour:
   option1: {fileID: 11400000, guid: 311315e137a4ff140a9018daa122e188, type: 2}
   option2: {fileID: 0}
   updatedQuestStatus: 0
+  userChoice: 0
   quest: {fileID: 0}

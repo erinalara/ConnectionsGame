@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5b38bb0e34b3f04b93d4e01e805d6f3, type: 3}
   m_Name: NPC_1
   m_EditorClassIdentifier: 
-  actorName: NPC_1
+  actorName: Hani
+  spritePortrait: {fileID: 21300000, guid: 627327c7aa63f9b47ad4bd1080f1a15e, type: 3}

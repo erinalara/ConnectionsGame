@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9da1bc3d27925bd438e5cf6d175ac213, type: 3}
   m_Name: Intro0b
   m_EditorClassIdentifier: 
-  actors: 0000000004000000
+  actors: 04000000
   randomActorName: 
   dialogue:
-  - No, sorry.
   - It's all right. (What was the point of this conversation...)
   optionText: []
   option0: {fileID: 0}
   option1: {fileID: 0}
   option2: {fileID: 0}
   updatedQuestStatus: 0
+  userChoice: 0
   quest: {fileID: 0}

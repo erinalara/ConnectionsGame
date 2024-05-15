@@ -21,7 +21,7 @@ MonoBehaviour:
   - Comfort them with words or stories they can relate to.
   - Giving objective advice about their situation.
   option0: {fileID: 11400000, guid: bbd77e68d487bcf4a88fcdeb3606839e, type: 2}
-  option1: {fileID: 11400000, guid: 8dae10f677c50ce41864461e95527419, type: 2}
+  option1: {fileID: 11400000, guid: b6ac17e65da16704ab29a856ff5ac5b9, type: 2}
   option2: {fileID: 0}
   updatedQuestStatus: 1
   userChoice: 5

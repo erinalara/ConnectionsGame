@@ -16,11 +16,12 @@ public class AdvancedDialogueManager : MonoBehaviour
     public ActorSO[] actorSO;
 
     private TMP_Text actor;
-    // private Image portrait;
+    private string actor_name;
+    private Image portrait;
     private TMP_Text dialogueText;
 
     private string currentSpeaker;
-    // private Sprite currPortrait;
+     private Sprite currPortrait;
 
     // Button references
     private GameObject[] optionButton;
@@ -59,7 +60,8 @@ public class AdvancedDialogueManager : MonoBehaviour
         dialogueCanvas = GameObject.Find("DialogueCanvas");
  
         actor = GameObject.Find("ActorText").GetComponent<TMP_Text>();
-        // portrait = GameObject.Find("Portrait");
+        actor_name = "";
+        portrait = GameObject.Find("Portrait").GetComponent<Image>();
         dialogueText = GameObject.Find("DialogueText").GetComponent<TMP_Text>();
         dialogueCanvas.SetActive(false);
 
@@ -87,6 +89,8 @@ public class AdvancedDialogueManager : MonoBehaviour
                 TurnOffDialogue();
                 var x = CheckQuest();
                 if (x)
+                    EvaluateQuest();
+                else
                     UpdateQuest();
             }
             
@@ -111,6 +115,7 @@ public class AdvancedDialogueManager : MonoBehaviour
         // Display dialogue
         actor.text = currentSpeaker;
         // set portrait here
+        portrait.sprite = currPortrait;
 
         // Check for option branch
         if (currentConversation.actors[stepNum] == DialogueActors.Branch)
@@ -158,12 +163,17 @@ public class AdvancedDialogueManager : MonoBehaviour
                 if (actorSO[i].name == currentConversation.actors[stepNum].ToString())
                 {
                     currentSpeaker = actorSO[i].actorName;
+                    actor_name = actorSO[i].name;
+                    currPortrait = actorSO[i].spritePortrait;
                 }
 
             }
         }
         else
+        {
             currentSpeaker = currentConversation.randomActorName;
+            currPortrait = null;
+        }
            
     }
 
@@ -179,7 +189,7 @@ public class AdvancedDialogueManager : MonoBehaviour
         if (optionNum == 2)
             currentConversation = currentConversation.option2;
         stepNum = 0;
-        UpdateQuest();
+        EvaluateQuest();
 
     }
 
@@ -222,7 +232,7 @@ public class AdvancedDialogueManager : MonoBehaviour
         Debug.Log("Ended convo:" + currentConversation);
     }
 
-    public void UpdateQuest()
+    public void EvaluateQuest()
     {   
         if (currentConversation.quest != null)
         {
@@ -232,18 +242,33 @@ public class AdvancedDialogueManager : MonoBehaviour
             }
             
             Debug.Log("Updating quest...");
-            var npc = currentConversation.quest.originNPC;
 
-            var questHandler = GameObject.Find(npc.ToString()).transform.Find("QuestHandler").GetComponent<QuestHandler>();
-            questHandler.UpdateQuestStatus(currentConversation.updatedQuestStatus, currentConversation.userChoice);
+            var questHandler = GameObject.Find(actor_name).transform.Find("QuestHandler").GetComponent<QuestHandler>();
+            questHandler.EvaluateQuestStatus(currentConversation.updatedQuestStatus, currentConversation.userChoice);
             
+        }
+    }
+
+    public void UpdateQuest()
+    {
+        if (currentConversation.quest != null)
+        {
+            if (currentConversation.quest.status == QuestStatus.Completed)
+            {
+                Debug.Log("CUE QUEST COMPLETION EFFECT");
+            }
+
+            Debug.Log("Updating quest...");
+
+            var questHandler = GameObject.Find(actor_name).transform.Find("QuestHandler").GetComponent<QuestHandler>();
+            questHandler.UpdateStatus(currentConversation.updatedQuestStatus);
+
         }
     }
 
     public bool CheckQuest()
     {
-        var npc = currentConversation.quest.originNPC;
-        var questHandler = GameObject.Find(npc.ToString()).transform.Find("QuestHandler").GetComponent<QuestHandler>();
+        var questHandler = GameObject.Find(actor_name).transform.Find("QuestHandler").GetComponent<QuestHandler>();
         int qType = questHandler.CheckQuestType();
         if (qType == 0)
             return true;

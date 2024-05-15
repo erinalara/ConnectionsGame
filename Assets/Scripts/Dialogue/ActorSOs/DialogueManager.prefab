@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &372272177162402997
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5723925914675823848}
+  - component: {fileID: 2414051882189790452}
+  m_Layer: 0
+  m_Name: DialogueManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5723925914675823848
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 372272177162402997}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.76155126, y: -19.8, z: 1.7072358}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2414051882189790452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 372272177162402997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38e9f76f283de1549a8a8f82c91ca6b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueCanvas: {fileID: 0}
+  actorSO:
+  - {fileID: 11400000, guid: 470e255de1740044a8ec0bd0e71dc015, type: 2}
+  - {fileID: 11400000, guid: 7e4afe98fcbd9414ebbdf0e782d11a16, type: 2}
+  - {fileID: 11400000, guid: 466cc201de375ed4e8c32d5698a3f560, type: 2}
+  - {fileID: 11400000, guid: 5156e1977a6eb1248b51f261f0c0036a, type: 2}
+  - {fileID: 11400000, guid: 22c09a4420847314780e20d842e8f058, type: 2}
+  - {fileID: 11400000, guid: 3c6247fb319d6e64fb62d65f7ebb7302, type: 2}
+  - {fileID: 11400000, guid: fdeb99d1391d2f042a3c4e8ffae699ab, type: 2}
+  - {fileID: 11400000, guid: abaa842f0573e5b4f9cfc739e53622ba, type: 2}
+  - {fileID: 11400000, guid: 9173b621c2507524f910bb7c070876f0, type: 2}
+  - {fileID: 11400000, guid: 816b1a8279a001544b3d4ae9d424465b, type: 2}
+  - {fileID: 11400000, guid: 63b49373b2addaa48adfa1ebcf68a277, type: 2}
+  - {fileID: 11400000, guid: f7b8e8790b609064eb05977e83ed3066, type: 2}
+  typingSpeed: 0.02
