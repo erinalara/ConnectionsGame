@@ -73,11 +73,16 @@ public class AdvancedDialogueManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (dialogueActivated && Input.GetButtonDown("Interact") && canContinueText)
+        // For pop up dialogue
+        if (((dialogueActivated && npcDialogue.isPopUpInfo) && stepNum == 0))
+        {
+            PlayDialogue();
+        }
+
+        else if (dialogueActivated && Input.GetButtonDown("Interact") && canContinueText)
         {
             // Change NPC direction
             npcDialogue.ChangeDirection();
-
             Debug.Log("started convo:" + currentConversation);
 
             // restrict player movement
@@ -94,7 +99,6 @@ public class AdvancedDialogueManager : MonoBehaviour
                     UpdateQuest();
             }
             
-
             // continue dialogue
             else
                 PlayDialogue();
@@ -116,6 +120,10 @@ public class AdvancedDialogueManager : MonoBehaviour
         actor.text = currentSpeaker;
         // set portrait here
         portrait.sprite = currPortrait;
+        if (portrait.sprite == null)
+            portrait.color = new Color32(0,0,0,0);
+
+
 
         // Check for option branch
         if (currentConversation.actors[stepNum] == DialogueActors.Branch)

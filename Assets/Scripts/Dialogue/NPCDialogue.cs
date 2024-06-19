@@ -9,6 +9,7 @@ public class NPCDialogue : MonoBehaviour
     public Sprite positionRight;
     public Sprite positionTop;
     public Sprite positionBottom;
+    public bool isPopUpInfo;
 
 
     private Transform player;

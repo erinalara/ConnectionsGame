@@ -121,7 +121,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: lamp
     originalName: 
-    pivot: {x: 0.53333336, y: -0.10204081}
+    pivot: {x: 0.50987697, y: 0.22949183}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -134,7 +134,17 @@ ScriptedImporter:
     spriteBone: []
     spriteOutline: []
     vertices: []
-    spritePhysicsOutline: []
+    spritePhysicsOutline:
+    - outline:
+      - {x: -7.5, y: 24.5}
+      - {x: -7.5, y: -24.5}
+      - {x: 7.5, y: -24.5}
+      - {x: 7.5, y: 24.5}
+    - outline:
+      - {x: -6.5, y: -24.5}
+      - {x: -6.5, y: -16.5}
+      - {x: 6.5, y: -16.5}
+      - {x: 6.5, y: -24.5}
     indices: 
     edges: []
     tessellationDetail: 0
