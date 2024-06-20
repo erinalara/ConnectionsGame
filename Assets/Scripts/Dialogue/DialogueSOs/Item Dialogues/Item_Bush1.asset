@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Item_Bush1
   m_EditorClassIdentifier: 
   actors: 01000000
-  randomActorName: Test
+  randomActorName: Bush
   dialogue:
   - You found a strange doll sticking out of the bush!
   optionText: []
@@ -21,4 +21,5 @@ MonoBehaviour:
   option1: {fileID: 0}
   option2: {fileID: 0}
   updatedQuestStatus: 2
+  userChoice: 0
   quest: {fileID: 11400000, guid: 01b707fd866a80344a02bf253998ae1f, type: 2}

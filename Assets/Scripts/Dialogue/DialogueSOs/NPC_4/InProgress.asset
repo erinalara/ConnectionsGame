@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actors: 06000000
   randomActorName: 
-  dialogue: []
+  dialogue:
+  - I'm sure it's here somewhere...
   optionText: []
   option0: {fileID: 0}
   option1: {fileID: 0}

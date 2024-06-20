@@ -21,7 +21,7 @@ public class AdvancedDialogueManager : MonoBehaviour
     private TMP_Text dialogueText;
 
     private string currentSpeaker;
-     private Sprite currPortrait;
+    private Sprite currPortrait;
 
     // Button references
     private GameObject[] optionButton;
@@ -83,7 +83,6 @@ public class AdvancedDialogueManager : MonoBehaviour
         {
             // Change NPC direction
             npcDialogue.ChangeDirection();
-            Debug.Log("started convo:" + currentConversation);
 
             // restrict player movement
             player.interactionActivated = true;
@@ -130,7 +129,6 @@ public class AdvancedDialogueManager : MonoBehaviour
         {
             for (int i = 0; i < currentConversation.optionText.Length; i++)
             {
-                Debug.Log(optionButtonText[i].text + " " + i);
 
                 if (currentConversation.optionText[i] == null)
                     optionButton[i].SetActive(false);
@@ -237,23 +235,17 @@ public class AdvancedDialogueManager : MonoBehaviour
         dialogueCanvas.SetActive(false);
         // let player move again
         player.interactionActivated = false;
-        Debug.Log("Ended convo:" + currentConversation);
     }
 
     public void EvaluateQuest()
     {   
         if (currentConversation.quest != null)
         {
-            if (currentConversation.quest.status == QuestStatus.Completed)
-            {
-                Debug.Log("CUE QUEST COMPLETION EFFECT");
-            }
-            
-            Debug.Log("Updating quest...");
-
-            var questHandler = GameObject.Find(actor_name).transform.Find("QuestHandler").GetComponent<QuestHandler>();
-            questHandler.EvaluateQuestStatus(currentConversation.updatedQuestStatus, currentConversation.userChoice);
-            
+            if (actor_name == "")
+                actor_name = currentConversation.quest.itemName;
+            //Debug.Log(actor_name);
+            var questHandler = GameObject.Find(actor_name).transform.Find("QuestHandler").GetComponent<QuestHandler>();           
+            questHandler.EvaluateQuestStatus(currentConversation.updatedQuestStatus, currentConversation.userChoice);           
         }
     }
 
@@ -261,14 +253,10 @@ public class AdvancedDialogueManager : MonoBehaviour
     {
         if (currentConversation.quest != null)
         {
-            if (currentConversation.quest.status == QuestStatus.Completed)
-            {
-                Debug.Log("CUE QUEST COMPLETION EFFECT");
-            }
-
-            Debug.Log("Updating quest...");
-
+            if (actor_name == "")
+                actor_name = currentConversation.quest.itemName;
             var questHandler = GameObject.Find(actor_name).transform.Find("QuestHandler").GetComponent<QuestHandler>();
+            
             questHandler.UpdateStatus(currentConversation.updatedQuestStatus);
 
         }
@@ -276,15 +264,16 @@ public class AdvancedDialogueManager : MonoBehaviour
 
     public bool CheckQuest()
     {
-        var questHandler = GameObject.Find(actor_name).transform.Find("QuestHandler").GetComponent<QuestHandler>();
-        int qType = questHandler.CheckQuestType();
-        if (qType == 0)
-            return true;
+        if (currentConversation.quest != null)
+        {
+
+            int qType = (int) currentConversation.quest.qType;
+            if (qType == 0)
+                return true;
+        }
         return false;
 
     }
-
-
 }
 
 public enum DialogueActors

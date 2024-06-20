@@ -10,19 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9da1bc3d27925bd438e5cf6d175ac213, type: 3}
-  m_Name: Conversation3
+  m_Name: Item_Gojo1
   m_EditorClassIdentifier: 
-  actors: 03000000030000000300000001000000
-  randomActorName: 
+  actors: 01000000
+  randomActorName: Life-sized cartoon figure
   dialogue:
-  - POOH! My little prince charming.
-  - 'Now, I''m going to give him a bath. '
-  - Thanks again!
-  - '*You begin to wonder what the point of this even was*'
+  - You found Navier's Jogo figure!
+  - (Thankfully, it isn't as heavy as it looks.)
   optionText: []
   option0: {fileID: 0}
   option1: {fileID: 0}
   option2: {fileID: 0}
-  updatedQuestStatus: 3
+  updatedQuestStatus: 2
   userChoice: 0
-  quest: {fileID: 11400000, guid: eadf1104c3ee152418083023f34d7166, type: 2}
+  quest: {fileID: 11400000, guid: cae1702114a1c1a4e8dddadd5432a585, type: 2}

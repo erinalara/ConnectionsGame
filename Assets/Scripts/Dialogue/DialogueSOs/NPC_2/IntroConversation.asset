@@ -15,12 +15,13 @@ MonoBehaviour:
   actors: 0400000002000000
   randomActorName: 
   dialogue:
-  - Hey! Are you the one that moved in last night?
+  - Oh my gosh, you're finally here! Welcome back!
   optionText:
-  - Yup! Just moved in the other day!
-  - No, I think that was some other person.
+  - It's nice seeing you again!
+  - Sorry, I don't know you..
   option0: {fileID: 11400000, guid: 231ba2cb887eed845b21a81264bc8c4d, type: 2}
   option1: {fileID: 11400000, guid: 3d38a2948757bcc4b846f8e3aaa25e61, type: 2}
   option2: {fileID: 0}
   updatedQuestStatus: 0
+  userChoice: 0
   quest: {fileID: 0}

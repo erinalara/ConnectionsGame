@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9da1bc3d27925bd438e5cf6d175ac213, type: 3}
   m_Name: IntroA
   m_EditorClassIdentifier: 
-  actors: 0800000008000000080000000800000007000000
+  actors: 0800000008000000080000000800000002000000
   randomActorName: 
   dialogue:
   - I haven't seen you since you left for college!
   - Time sure moves by fast.
-  - 'Anyways, Gerald and I were borrowing Tina''s camera earlier but ended up misplacing
+  - 'Anyways, Kate and I were borrowing Tina''s camera earlier but ended up misplacing
     it. '
   - Can you help us?
   optionText:

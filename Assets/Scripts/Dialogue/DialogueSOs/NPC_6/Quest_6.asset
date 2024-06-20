@@ -15,6 +15,6 @@ MonoBehaviour:
   qType: 0
   originNPC: 8
   status: 0
-  itemName: 
+  itemName: Cam
   answerResults: 
   survey: {fileID: 0}

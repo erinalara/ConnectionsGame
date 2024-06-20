@@ -15,7 +15,7 @@ MonoBehaviour:
   actors: 08000000
   randomActorName: 
   dialogue:
-  - That figure costed like $300... (Maybe it was the shine that costed $300)
+  - I remember using it for a photoshoot somewhere... but where?
   optionText: []
   option0: {fileID: 0}
   option1: {fileID: 0}

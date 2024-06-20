@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9da1bc3d27925bd438e5cf6d175ac213, type: 3}
   m_Name: Intro0
   m_EditorClassIdentifier: 
-  actors: 040000000400000002000000
+  actors: 04000000040000000400000002000000
   randomActorName: 
   dialogue:
-  - Wow! Welcome!
-  - Say, can you do me a huuuuuge favor?
+  - Likewise! We have to catch up sometime!
+  - 'Unfortunately, I''m in a huge rush at the moment. '
+  - Can you do me a huge favor?
   optionText:
   - Sure!
   - No, sorry.

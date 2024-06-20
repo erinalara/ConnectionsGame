@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9da1bc3d27925bd438e5cf6d175ac213, type: 3}
   m_Name: Intro1
   m_EditorClassIdentifier: 
-  actors: 04000000
+  actors: 0400000004000000
   randomActorName: 
   dialogue:
-  - Oh oops! Well, carry on!
+  - Oh sorry! You look like my old friend.
+  - Well, see you around!
   optionText: []
   option0: {fileID: 0}
   option1: {fileID: 0}

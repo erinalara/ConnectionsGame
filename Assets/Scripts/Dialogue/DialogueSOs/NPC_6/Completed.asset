@@ -16,7 +16,7 @@ MonoBehaviour:
   randomActorName: 
   dialogue:
   - Oh my goodness. Thank you so much!
-  - Not sure if you already did, but you should say hi to Gerald and and Tina!
+  - Not sure if you already did, but you should say hi to Kate and Tina!
   - We all missed you!
   optionText: []
   option0: {fileID: 0}

@@ -15,7 +15,7 @@ MonoBehaviour:
   actors: 04000000
   randomActorName: 
   dialogue:
-  - It's all right. (What was the point of this conversation...)
+  - It's okay. (What was the point of this conversation...)
   optionText: []
   option0: {fileID: 0}
   option1: {fileID: 0}

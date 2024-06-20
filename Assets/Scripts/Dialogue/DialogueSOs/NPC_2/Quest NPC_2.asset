@@ -15,6 +15,6 @@ MonoBehaviour:
   qType: 0
   originNPC: 4
   status: 0
-  itemName: Bush
+  itemName: glasses
   answerResults: 
   survey: {fileID: 0}

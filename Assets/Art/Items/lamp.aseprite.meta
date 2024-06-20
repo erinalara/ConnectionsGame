@@ -121,7 +121,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: lamp
     originalName: 
-    pivot: {x: 0.50987697, y: 0.22949183}
+    pivot: {x: 0.51006705, y: 0.33600968}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:

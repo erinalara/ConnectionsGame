@@ -11186,17 +11186,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mask: {fileID: 1693770369}
   quests:
+  - {fileID: 11400000, guid: eadf1104c3ee152418083023f34d7166, type: 2}
   - {fileID: 11400000, guid: 01b707fd866a80344a02bf253998ae1f, type: 2}
   - {fileID: 11400000, guid: 8d9aee917e8a69e4ba119887363630d5, type: 2}
   - {fileID: 11400000, guid: 0c17345734efaef41ae883fbeb504d2f, type: 2}
   - {fileID: 11400000, guid: cae1702114a1c1a4e8dddadd5432a585, type: 2}
   - {fileID: 11400000, guid: ccc2041ea2142dc4fb69acf62c07a955, type: 2}
-  - {fileID: 11400000, guid: eadf1104c3ee152418083023f34d7166, type: 2}
   - {fileID: 11400000, guid: 3b7b2736af1b4104d9ea0ecb58df1bba, type: 2}
   - {fileID: 11400000, guid: 1dac97fcee76c9440b2c0c6560da0624, type: 2}
   - {fileID: 11400000, guid: fcda399146e816b4e93ddb295585fa17, type: 2}
   questsCompleted: []
-  maximum: 2
+  maximum: 9
   current: 0
 --- !u!114 &1393858259
 MonoBehaviour:
@@ -15695,63 +15695,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1001 &5239439767908342550
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 5772501431056382072, guid: 87339722bf9ed484b87a0f16508ff609, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -14.09
-      objectReference: {fileID: 0}
-    - target: {fileID: 5772501431056382072, guid: 87339722bf9ed484b87a0f16508ff609, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 6.6499996
-      objectReference: {fileID: 0}
-    - target: {fileID: 5772501431056382072, guid: 87339722bf9ed484b87a0f16508ff609, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5772501431056382072, guid: 87339722bf9ed484b87a0f16508ff609, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 5772501431056382072, guid: 87339722bf9ed484b87a0f16508ff609, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5772501431056382072, guid: 87339722bf9ed484b87a0f16508ff609, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5772501431056382072, guid: 87339722bf9ed484b87a0f16508ff609, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 5772501431056382072, guid: 87339722bf9ed484b87a0f16508ff609, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5772501431056382072, guid: 87339722bf9ed484b87a0f16508ff609, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5772501431056382072, guid: 87339722bf9ed484b87a0f16508ff609, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 6769457763338358813, guid: 87339722bf9ed484b87a0f16508ff609, type: 3}
-      propertyPath: m_Name
-      value: desk
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 87339722bf9ed484b87a0f16508ff609, type: 3}
 --- !u!1001 &6050804538632004949
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16000,4 +15943,3 @@ SceneRoots:
   - {fileID: 697867456}
   - {fileID: 1528726157665285946}
   - {fileID: 6050804538632004949}
-  - {fileID: 5239439767908342550}

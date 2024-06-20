@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9da1bc3d27925bd438e5cf6d175ac213, type: 3}
   m_Name: IntroB
   m_EditorClassIdentifier: 
-  actors: 08000000
+  actors: 0800000008000000080000000800000002000000
   randomActorName: 
   dialogue:
-  - It's me! Katrina! Remember?
-  - The girl who adopted you in high school. (Ah, good times.)
+  - It's me! Gerald! Remember?
+  - Everyone thought we were related in high school!
   - If you don't remember that's okay.
   - Do you think you can help me and a friend look for something real quick?
   optionText:

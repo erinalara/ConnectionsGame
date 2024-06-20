@@ -20,7 +20,7 @@ public class QuestHandler : MonoBehaviour
         var _cb = GameObject.Find("ConnectionBar");
         connectionBar = _cb.transform.Find("BarCanvas/ProgressBar").GetComponent<ConnectionBar>();
 
-        if (connectionBar == null | !CheckBarQuests())
+        if (connectionBar == null )
         {
             EvaluateQuestStatus(QuestStatus.Inactive, WordQuestType.None);
             hasFinished = false;
@@ -37,6 +37,7 @@ public class QuestHandler : MonoBehaviour
 
     public void UpdateStatus(QuestStatus qStatus)
     {
+        Debug.Log(qStatus);
         quest.status = qStatus;
 
     }
@@ -65,7 +66,6 @@ public class QuestHandler : MonoBehaviour
             quest.answerResults.Add(userChoice);
         if (quest.status == QuestStatus.Completed)
         {
-            Debug.Log(EvaluateWordResults());
             UpdateBar();
         }
     }

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2f1b337e7b2a3544eba35b26a14d8e9d
+guid: 30f9235a64196e04993aa0d570a985f3
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -95,7 +95,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638508051535841601
+  platformSettingsDirtyTick: 638544168275131938
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -119,18 +119,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: pooh
+  - name: pooh 1
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: -0.3, y: -0.14285715}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 18
-      height: 28
-    spriteID: 3148843200ab10c4e88bd4a6121f9a07
+      width: 10
+      height: 14
+    spriteID: 92716f2458c59ed4eaa4ea5a2a07c1da
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -142,20 +142,20 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -616080652
-    name: pooh
+    guid: -511681371
+    name: pooh 1
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: pooh
+    - name: pooh 1
       frameIndex: 0
       cellRect:
-        x: 7
-        y: 0
-        width: 18
-        height: 28
-      spriteId: 3148843200ab10c4e88bd4a6121f9a07
+        x: 19
+        y: 2
+        width: 10
+        height: 14
+      spriteId: 92716f2458c59ed4eaa4ea5a2a07c1da
     linkedCells: []
     parentIndex: -1
   platformSettings:

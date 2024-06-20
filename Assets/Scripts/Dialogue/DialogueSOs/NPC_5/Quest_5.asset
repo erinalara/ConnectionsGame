@@ -15,6 +15,6 @@ MonoBehaviour:
   qType: 0
   originNPC: 7
   status: 0
-  itemName: 
+  itemName: Gojo
   answerResults: 
   survey: {fileID: 0}

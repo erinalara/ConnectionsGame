@@ -18,7 +18,7 @@ MonoBehaviour:
   - You're the new resident right? (It's like only weirdos move here...)
   - Though, I did hear that you were actually from this town originally, so I guess
     you can't really say you're 'new' anyways.
-  - (What lunatic would want to move back he-)
+  - (What idiot would want to move back he-)
   - Wait. Now that I look at you, you look familiar. Do I know you?
   optionText:
   - I don't think so...
@@ -27,4 +27,5 @@ MonoBehaviour:
   option1: {fileID: 11400000, guid: 454655fc6ea7e3548ad8220c0ae03bb8, type: 2}
   option2: {fileID: 0}
   updatedQuestStatus: 0
+  userChoice: 0
   quest: {fileID: 0}
