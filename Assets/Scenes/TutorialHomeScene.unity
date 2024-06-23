@@ -11144,6 +11144,7 @@ GameObject:
   - component: {fileID: 1393858260}
   - component: {fileID: 1393858259}
   - component: {fileID: 1393858258}
+  - component: {fileID: 1393858261}
   m_Layer: 0
   m_Name: ProgressBar
   m_TagString: Untagged
@@ -11196,6 +11197,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1dac97fcee76c9440b2c0c6560da0624, type: 2}
   - {fileID: 11400000, guid: fcda399146e816b4e93ddb295585fa17, type: 2}
   questsCompleted: []
+  questWords: 
   maximum: 9
   current: 0
 --- !u!114 &1393858259
@@ -11236,6 +11238,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1393858256}
   m_CullTransparentMesh: 1
+--- !u!114 &1393858261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1393858256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3300c135a8e76204f82f6c541b09852a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quest: {fileID: 11400000, guid: fcda399146e816b4e93ddb295585fa17, type: 2}
 --- !u!1 &1477444284
 GameObject:
   m_ObjectHideFlags: 0

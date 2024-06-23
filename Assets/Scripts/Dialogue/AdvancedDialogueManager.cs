@@ -91,11 +91,11 @@ public class AdvancedDialogueManager : MonoBehaviour
             if (stepNum >= currentConversation.actors.Length)
             {
                 TurnOffDialogue();
-                var x = CheckQuest();
-                if (x)
-                    EvaluateQuest();
-                else
-                    UpdateQuest();
+                /*var x = CheckQuest();
+                if (x)*/
+                EvaluateQuest();
+                /*else
+                    UpdateQuest();*/
             }
             
             // continue dialogue
@@ -179,6 +179,7 @@ public class AdvancedDialogueManager : MonoBehaviour
         {
             currentSpeaker = currentConversation.randomActorName;
             currPortrait = null;
+            actor_name = "";
         }
            
     }
@@ -243,26 +244,25 @@ public class AdvancedDialogueManager : MonoBehaviour
         {
             if (actor_name == "")
                 actor_name = currentConversation.quest.itemName;
-            //Debug.Log(actor_name);
             var questHandler = GameObject.Find(actor_name).transform.Find("QuestHandler").GetComponent<QuestHandler>();           
             questHandler.EvaluateQuestStatus(currentConversation.updatedQuestStatus, currentConversation.userChoice);           
         }
     }
 
-    public void UpdateQuest()
+    /*public void UpdateQuest()
     {
         if (currentConversation.quest != null)
         {
             if (actor_name == "")
                 actor_name = currentConversation.quest.itemName;
             var questHandler = GameObject.Find(actor_name).transform.Find("QuestHandler").GetComponent<QuestHandler>();
-            
+
             questHandler.UpdateStatus(currentConversation.updatedQuestStatus);
 
         }
-    }
+    }*/
 
-    public bool CheckQuest()
+    /*public bool CheckQuest()
     {
         if (currentConversation.quest != null)
         {
@@ -273,7 +273,7 @@ public class AdvancedDialogueManager : MonoBehaviour
         }
         return false;
 
-    }
+    }*/
 }
 
 public enum DialogueActors

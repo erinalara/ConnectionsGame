@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class QuestHandler : MonoBehaviour
 {
+
     public QuestSO quest;
     //private QuestStatus status;
     private ConnectionBar connectionBar;
@@ -17,14 +18,19 @@ public class QuestHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        var _cb = GameObject.Find("ConnectionBar");
-        connectionBar = _cb.transform.Find("BarCanvas/ProgressBar").GetComponent<ConnectionBar>();
-
-        if (connectionBar == null )
+        if (quest)
         {
-            EvaluateQuestStatus(QuestStatus.Inactive, WordQuestType.None);
-            hasFinished = false;
+            var _cb = GameObject.Find("ConnectionBar");
+            connectionBar = _cb.transform.Find("BarCanvas/ProgressBar").GetComponent<ConnectionBar>();
+            if (!(connectionBar.questsCompleted.Contains(quest)))
+                hasFinished = false;
+            /*if (connectionBar == null)
+            {
+                EvaluateQuestStatus(QuestStatus.Inactive, WordQuestType.None);
+                hasFinished = false;
+            }*/
         }
+        
     }
 
     // Update is called once per frame
@@ -37,7 +43,8 @@ public class QuestHandler : MonoBehaviour
 
     public void UpdateStatus(QuestStatus qStatus)
     {
-        Debug.Log(qStatus);
+        //Debug.Log(quest.itemName);
+        //Debug.Log(qStatus);
         quest.status = qStatus;
 
     }
@@ -100,6 +107,12 @@ public class QuestHandler : MonoBehaviour
     {
         connectionBar.UpdateBar(quest);
         hasFinished = true;
+        if (quest.qType == QuestType.WordChoice)
+        {
+            //Debug.Log(EvaluateWordResults());
+            connectionBar.AddWordResults(EvaluateWordResults());
+        }
+
     }
 
     public bool CheckBarQuests()
@@ -108,6 +121,14 @@ public class QuestHandler : MonoBehaviour
         if (quests.Contains(quest))
             return true;
         return false;
+    }
+
+    public void ResetQuest()
+    {
+        EvaluateQuestStatus(QuestStatus.Inactive, WordQuestType.None);
+        if (quest.qType == QuestType.WordChoice)
+            quest.answerResults.Clear();
+        //hasFinished = false;
     }
 
 
