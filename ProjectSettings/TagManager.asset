@@ -8,6 +8,7 @@ TagManager:
   - CamBounds
   - OptionButton
   - ConnectionBar
+  - MenuOptionButton
   layers:
   - Default
   - TransparentFX

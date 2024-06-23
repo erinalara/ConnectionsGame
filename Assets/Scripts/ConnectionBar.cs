@@ -15,7 +15,6 @@ public class ConnectionBar : MonoBehaviour
     public int maximum;
     public int current;
 
-    private bool gameStarted;
     private QuestHandler qHandler;
 
 
@@ -33,7 +32,6 @@ public class ConnectionBar : MonoBehaviour
             {
                 qHandler.quest = quest;
                 qHandler.ResetQuest();
-                gameStarted = true;
             }
         }
         

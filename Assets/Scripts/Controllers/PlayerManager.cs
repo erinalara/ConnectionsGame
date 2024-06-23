@@ -11,7 +11,6 @@ public class PlayerManager : MonoBehaviour
     public Vector2 lastPosition;
 
 
-
     public Vector2 GetPosition()
     {
         return lastPosition;
@@ -34,6 +33,4 @@ public class PlayerManager : MonoBehaviour
             Destroy(this);
         }
     }
-
-
 }

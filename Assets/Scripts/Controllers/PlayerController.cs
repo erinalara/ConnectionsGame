@@ -101,6 +101,12 @@ public class PlayerController : MonoBehaviour
             tLoader.StartTransition(collision.gameObject.name);
             playerManager.SetPosition(position);
         }
+
+        // Game end
+        if (collision.gameObject.tag == "Finish")
+        {
+            Debug.Log("Game end");
+        }
         
     }
 
