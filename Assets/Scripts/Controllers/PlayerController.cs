@@ -106,6 +106,10 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag == "Finish")
         {
             Debug.Log("Game end");
+            var gc = GameObject.Find("PlayerManager").GetComponent<GameController>();
+            if (gc)
+                gc.ShowFinishMenu();
+
         }
         
     }

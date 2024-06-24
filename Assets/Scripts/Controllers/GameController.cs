@@ -62,6 +62,7 @@ public class GameController : MonoBehaviour
             player = GameObject.Find("Player").GetComponent<PlayerController>();
 
             player.interactionActivated = true;
+            ResetMenuText();
             ShowMenu();
         }
         
@@ -88,14 +89,71 @@ public class GameController : MonoBehaviour
         }
     }
 
+    void ResetMenuText()
+    {
+        // Game Menu text
+        optionButtonText[0].SetText("Resume");
+        optionButtonText[1].SetText("Quit");
+        menuText.SetText("Game Paused");
+
+    }
+
+    public void ShowFinishMenu()
+    {
+        player = GameObject.Find("Player").GetComponent<PlayerController>();
+        player.interactionActivated = true;
+
+        // Finish Menu text
+        optionButtonText[0].SetText("No");
+        optionButtonText[1].SetText("Yes");
+        menuText.SetText("End the day?");
+
+
+        menuPanel.SetActive(true);
+        gameMenu.SetActive(true);
+        optionsPanel.SetActive(true);
+
+        for (int i = 0; i < menuPanel.transform.childCount; i++)
+        {
+            optionButton[i].SetActive(true);
+            optionButton[0].GetComponent<Button>().Select();
+
+        }
+    }
+
+    public void FinishOption(int optionNum)
+    {
+        player = GameObject.Find("Player").GetComponent<PlayerController>();
+
+        if (optionNum == 0)
+        {
+            Debug.Log("No");
+            player.interactionActivated = false;
+
+
+        }
+        if (optionNum == 1)
+        {
+            tLoader = GameObject.Find("TransitionLoader").GetComponent<TransitionLoader>();
+
+            Debug.Log("Yes");
+            Destroy(GameObject.Find("ConnectionBar"));
+            tLoader.StartTransition("MainScene");
+            Destroy(gameObject);
+        }
+        gameMenu.SetActive(false);
+    }
+
     public void Option(int optionNum)
     {
         ///*foreach (GameObject button in optionButton)
         //    button.SetActive(false);*/
+        player = GameObject.Find("Player").GetComponent<PlayerController>();
 
         if (optionNum == 0)
         {
             Debug.Log("resume");
+            player.interactionActivated = false;
 
         }
         if (optionNum == 1)
