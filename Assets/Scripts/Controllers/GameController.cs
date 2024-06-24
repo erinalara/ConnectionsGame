@@ -9,7 +9,9 @@ public class GameController : MonoBehaviour
 {
 
     // UI references
-    public GameObject gameMenu;
+    private GameObject gameMenu;
+    private TransitionLoader tLoader;
+
 
     private TMP_Text menuText;
 
@@ -18,15 +20,17 @@ public class GameController : MonoBehaviour
     private TMP_Text[] optionButtonText;
     private GameObject optionsPanel;
     private GameObject menuPanel;
+    private PlayerController player;
 
     // Start is called before the first frame update
     void Start()
     {
+        tLoader = GameObject.Find("TransitionLoader").GetComponent<TransitionLoader>();
+        player = GameObject.Find("Player").GetComponent<PlayerController>();
 
         // Find buttons
         optionButton = GameObject.FindGameObjectsWithTag("MenuOptionButton");
         optionsPanel = GameObject.Find("MenuPanel/MenuOptionsPanel");
-        Debug.Log(optionsPanel);
         optionsPanel.SetActive(false);
 
         menuPanel = GameObject.Find("MenuPanel");
@@ -45,7 +49,7 @@ public class GameController : MonoBehaviour
 
         gameMenu = GameObject.Find("GameMenu");
 
-        menuText = GameObject.Find("MenuText").GetComponent<TMP_Text>();
+        menuText = GameObject.Find("/PlayerManager/GameMenu/MenuPanel/MenuText").GetComponent<TMP_Text>();
         gameMenu.SetActive(false);
 
     }
@@ -55,8 +59,12 @@ public class GameController : MonoBehaviour
     {
         if (Input.GetButtonDown("Pause"))
         {
+            player = GameObject.Find("Player").GetComponent<PlayerController>();
+
+            player.interactionActivated = true;
             ShowMenu();
         }
+        
         
     }
 
@@ -92,7 +100,12 @@ public class GameController : MonoBehaviour
         }
         if (optionNum == 1)
         {
+            tLoader = GameObject.Find("TransitionLoader").GetComponent<TransitionLoader>();
+
             Debug.Log("quit");
+            Destroy(GameObject.Find("ConnectionBar"));
+            tLoader.StartTransition("MainScene");
+            Destroy(gameObject);
         }
         gameMenu.SetActive(false);
 
