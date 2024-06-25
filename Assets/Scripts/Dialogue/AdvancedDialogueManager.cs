@@ -118,9 +118,12 @@ public class AdvancedDialogueManager : MonoBehaviour
         // Display dialogue
         actor.text = currentSpeaker;
         // set portrait here
+
         portrait.sprite = currPortrait;
+        portrait.color = new Color32(255, 255, 255, 255);
         if (portrait.sprite == null)
             portrait.color = new Color32(0,0,0,0);
+
 
 
 
