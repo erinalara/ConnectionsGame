@@ -39,10 +39,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Building_1.unity
     guid: c2b9bd4ff42373b419708bd9c9ea2504
   - enabled: 1
-    path: Assets/Scenes/Building_2.unity
-    guid: d7ee5cb770d803844ae90537a0d1aec7
-  - enabled: 1
-    path: Assets/Scenes/Building_3.unity
+    path: Assets/Scenes/NHouse4.unity
     guid: 88fa319f2b212c14aba763275ae9709f
   - enabled: 1
     path: Assets/Scenes/NHouse2.unity

@@ -65,8 +65,7 @@ public enum TransitionScenes
     NHouse1,
     MartScene, 
     Building_1,
-    Building_2,
-    Building_3,
+    NHouse4,
     NHouse2,
 
 };

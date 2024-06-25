@@ -59,7 +59,7 @@ public class NPCDialogue : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {           
-            //advancedDialogueManager.TurnOffDialogue();
+            advancedDialogueManager.TurnOffDialogue();
             dialogueInitiated = false;
             spriteRenderer.sprite = positionBottom;
 
