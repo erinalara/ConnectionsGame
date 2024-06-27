@@ -15,8 +15,8 @@ MonoBehaviour:
   actors: 0300000003000000
   randomActorName: 
   dialogue:
-  - Oh, it's you again.
-  - 'Thanks for finding Pooh earlier! '
+  - Oh, it's you.
+  - Thanks for finding Pooh earlier.
   optionText: []
   option0: {fileID: 0}
   option1: {fileID: 0}

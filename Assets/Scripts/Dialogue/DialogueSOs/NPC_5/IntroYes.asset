@@ -15,7 +15,7 @@ MonoBehaviour:
   actors: 07000000
   randomActorName: 
   dialogue:
-  - THANK YOU! It's a shiny anime figure, you can't miss it!
+  - THANK YOU! It's a life-sized figure, you can't miss it!
   optionText: []
   option0: {fileID: 0}
   option1: {fileID: 0}

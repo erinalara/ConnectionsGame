@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9da1bc3d27925bd438e5cf6d175ac213, type: 3}
   m_Name: End
   m_EditorClassIdentifier: 
-  actors: 09000000
+  actors: 0900000009000000
   randomActorName: 
   dialogue:
-  - END
+  - (If Amelia doesn't find Jogo by the time I finish all these surveys... I swear...)
+  - Oh hey! Thanks for answering my survey earlier!
   optionText: []
   option0: {fileID: 0}
   option1: {fileID: 0}

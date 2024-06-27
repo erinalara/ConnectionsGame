@@ -9,6 +9,7 @@ TagManager:
   - OptionButton
   - ConnectionBar
   - MenuOptionButton
+  - Audio
   layers:
   - Default
   - TransparentFX

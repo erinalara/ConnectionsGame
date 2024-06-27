@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9da1bc3d27925bd438e5cf6d175ac213, type: 3}
   m_Name: Conversation2
   m_EditorClassIdentifier: 
-  actors: 03000000
+  actors: 03000000030000000300000003000000
   randomActorName: 
   dialogue:
   - (Oh Pooh. Where could you be?)
@@ -24,4 +24,5 @@ MonoBehaviour:
   option1: {fileID: 0}
   option2: {fileID: 0}
   updatedQuestStatus: 0
+  userChoice: 0
   quest: {fileID: 0}

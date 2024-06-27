@@ -15,7 +15,7 @@ MonoBehaviour:
   actors: 07000000
   randomActorName: 
   dialogue:
-  - Thanks again! I hope Diane never finds out it went missing.
+  - Thanks again! I hope Navier never finds out it went missing...
   optionText: []
   option0: {fileID: 0}
   option1: {fileID: 0}

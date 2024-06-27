@@ -15,7 +15,7 @@ MonoBehaviour:
   actors: 07000000
   randomActorName: 
   dialogue:
-  - That figure costed like $300... (Maybe it was the shine that costed $300)
+  - That figure costed like $300... (Who pays $300 for a figure...)
   optionText: []
   option0: {fileID: 0}
   option1: {fileID: 0}

@@ -15,7 +15,7 @@ MonoBehaviour:
   actors: 0400000004000000
   randomActorName: 
   dialogue:
-  - 'YOU FOUND IT!!! '
+  - You found it!
   - Thank you so so so much!
   optionText: []
   option0: {fileID: 0}

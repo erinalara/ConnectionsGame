@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9da1bc3d27925bd438e5cf6d175ac213, type: 3}
   m_Name: Completed
   m_EditorClassIdentifier: 
-  actors: 05000000
+  actors: 0500000005000000
   randomActorName: 
   dialogue:
-  - Thanks for answering my survey! WOO
+  - Those are all the questions. Thank you so much!
+  - This survey is actually due tomorrow. Heh.
   optionText: []
   option0: {fileID: 0}
   option1: {fileID: 0}

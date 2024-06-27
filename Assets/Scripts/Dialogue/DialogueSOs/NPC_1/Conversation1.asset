@@ -12,14 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9da1bc3d27925bd438e5cf6d175ac213, type: 3}
   m_Name: Conversation1
   m_EditorClassIdentifier: 
-  actors: 0300000003000000030000000300000002000000
+  actors: 03000000030000000300000002000000
   randomActorName: 
   dialogue:
-  - You're the new resident right? (It's like only weirdos move here...)
-  - Though, I did hear that you were actually from this town originally, so I guess
-    you can't really say you're 'new' anyways.
-  - (What idiot would want to move back he-)
-  - Wait. Now that I look at you, you look familiar. Do I know you?
+  - You're the new neighbor right? (It's like only creeps move here...)
+  - Huh.
+  - You look familiar. Do I know you?
   optionText:
   - I don't think so...
   - ...you used to call me Coconut Head...

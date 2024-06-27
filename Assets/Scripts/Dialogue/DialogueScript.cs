@@ -12,14 +12,21 @@ public class DialogueScript : MonoBehaviour
     public string[] lines;
     public float textSpeed;
     public float startDelay;
+    public GameObject music;
 
     private int index;
+    private AudioController musicController; 
 
     // Start is called before the first frame update
     void Start()
     {
         textComponent.text = string.Empty;
         Invoke("StartDialogue", startDelay);
+        if (music)
+        {
+            musicController = music.GetComponent<AudioController>();
+            musicController.FadeIn();
+        }
     }
 
     // Update is called once per frame
@@ -32,8 +39,12 @@ public class DialogueScript : MonoBehaviour
             }
             else
             {
+                if (music)
+                    StartCoroutine(musicController.FadeOut());
                 StopAllCoroutines();
                 textComponent.text = lines[index];
+                
+                
             }
         }
     }

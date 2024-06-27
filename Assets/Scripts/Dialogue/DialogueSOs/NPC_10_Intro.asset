@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9da1bc3d27925bd438e5cf6d175ac213, type: 3}
   m_Name: NPC_10_Intro
   m_EditorClassIdentifier: 
-  actors: 0c000000
+  actors: 0c0000000c000000
   randomActorName: 
   dialogue:
-  - It's me! Dinurrrr
+  - If you see my girlfriend, please help her with her project.
+  - ...It's due tomorrow...
   optionText: []
   option0: {fileID: 0}
   option1: {fileID: 0}

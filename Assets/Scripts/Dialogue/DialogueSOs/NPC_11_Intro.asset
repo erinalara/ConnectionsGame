@@ -15,7 +15,7 @@ MonoBehaviour:
   actors: 0d000000
   randomActorName: 
   dialogue:
-  - It's me! Dinurrrr
+  - Shh... I'm hiding...
   optionText: []
   option0: {fileID: 0}
   option1: {fileID: 0}

@@ -619,6 +619,7 @@ MonoBehaviour:
   - Hopefully I can find what I had lost along the way.
   textSpeed: 0.05
   startDelay: 2
+  music: {fileID: 1960616692}
 --- !u!114 &1898114298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -804,6 +805,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1960616694}
   - component: {fileID: 1960616693}
+  - component: {fileID: 1960616695}
   m_Layer: 0
   m_Name: Audio Source
   m_TagString: Untagged
@@ -822,8 +824,8 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 93c603f59de64ed4caa1570548af5dd0, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 0.065
+  m_PlayOnAwake: 0
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -922,6 +924,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1960616695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960616692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af3e938d53d9aa94dbcd4795e5e5d316, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeInTime: 3
+  fadeOutTime: 4
 --- !u!114 &1177446029605937335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1187,7 +1203,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 7388126596303576153}
   - {fileID: 1900761405}
+  - {fileID: 1960616694}
   - {fileID: 1602722919}
   - {fileID: 1184385377}
   - {fileID: 1807089077}
-  - {fileID: 1960616694}

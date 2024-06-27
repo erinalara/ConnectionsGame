@@ -15,10 +15,10 @@ MonoBehaviour:
   actors: 0900000002000000
   randomActorName: 
   dialogue:
-  - Can you answer some questions for me?
+  - Heyyyy, can you answer some questions for me please?
   optionText:
-  - y
-  - n
+  - Sure
+  - No
   option0: {fileID: 11400000, guid: 256a15edd10eaa4499e6c10e16233a85, type: 2}
   option1: {fileID: 11400000, guid: d55b72a9d7b420c419d2ce31753ea125, type: 2}
   option2: {fileID: 0}

@@ -12051,6 +12051,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1411801350}
   - component: {fileID: 1411801351}
+  - component: {fileID: 1411801352}
   m_Layer: 0
   m_Name: Audio Source
   m_TagString: Untagged
@@ -12084,7 +12085,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 6d85ea1bfa73dd0448049b97fdc9c554, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.075
   m_Pitch: 1
   Loop: 1
@@ -12169,6 +12170,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1411801352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1411801349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af3e938d53d9aa94dbcd4795e5e5d316, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeInTime: 4
+  fadeOutTime: 4
 --- !u!1 &1428179312
 GameObject:
   m_ObjectHideFlags: 0
@@ -12782,6 +12797,7 @@ MonoBehaviour:
   - Go back to bed when you're ready to end.
   textSpeed: 0.05
   startDelay: 4
+  music: {fileID: 1411801349}
 --- !u!114 &1877824704
 MonoBehaviour:
   m_ObjectHideFlags: 0

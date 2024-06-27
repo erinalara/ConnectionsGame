@@ -15,7 +15,7 @@ MonoBehaviour:
   actors: 05000000
   randomActorName: 
   dialogue:
-  - END
+  - Thanks so much for earlier!
   optionText: []
   option0: {fileID: 0}
   option1: {fileID: 0}
