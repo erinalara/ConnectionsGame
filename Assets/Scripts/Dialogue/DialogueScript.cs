@@ -14,6 +14,7 @@ public class DialogueScript : MonoBehaviour
     public float startDelay;
 
     private int index;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -40,7 +41,6 @@ public class DialogueScript : MonoBehaviour
     void StartDialogue()
     {
         index = 0;
-        Debug.Log("Start dialogue");
         StartCoroutine(TypeLine());
     }
 
@@ -64,11 +64,7 @@ public class DialogueScript : MonoBehaviour
         else
         {
             gameObject.SetActive(false);
-            Debug.Log("End dialogue");
             tLoader.StartTransition();
-
-
-
         }
     }
 }

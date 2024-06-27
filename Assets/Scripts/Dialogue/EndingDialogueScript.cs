@@ -17,12 +17,15 @@ public class EndingDialogueScript : MonoBehaviour
     // completed all 9
     public string[] lines_3;
 
+
     public float textSpeed;
     public float startDelay;
 
     private int index;
     private int questNum;
     private string wordResult;
+    private bool showChart;
+    private GameObject chart;
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +35,9 @@ public class EndingDialogueScript : MonoBehaviour
         textComponent.text = string.Empty;
         SetText();
         Invoke("StartDialogue", startDelay);
+        showChart = false;
+        chart = GameObject.Find("WordChart");
+
     }
 
     // Update is called once per frame
@@ -39,8 +45,14 @@ public class EndingDialogueScript : MonoBehaviour
     {
         if (Input.GetButtonDown("Interact"))
         {
+            if (showChart)
+                chart.SetActive(false);
+            showChart = false;
             if (textComponent.text == lines[index]) {
                 NextLine();
+                if (showChart)               
+                    chart.SetActive(true);
+                
             }
             else
             {
@@ -53,16 +65,22 @@ public class EndingDialogueScript : MonoBehaviour
     void StartDialogue()
     {
         index = 0;
-        Debug.Log("Start dialogue");
         StartCoroutine(TypeLine());
     }
 
     IEnumerator TypeLine()
     {
-        if ((wordResult != null) && (lines[index] == null))
+        if ((!(string.IsNullOrEmpty(wordResult))) && (string.IsNullOrEmpty(lines[index])))
         {
             lines[index] = wordResult;
+            showChart = true;
+            
         }
+        if ((string.IsNullOrEmpty(wordResult)) && (string.IsNullOrEmpty(lines[index])))
+        {
+            lines[index] = "Oh. You didn't even bother to answer anyone's survey huh.";
+        }
+
         foreach (char c in lines[index].ToCharArray())
         {
             textComponent.text += c;
@@ -81,11 +99,8 @@ public class EndingDialogueScript : MonoBehaviour
         else
         {
             gameObject.SetActive(false);
-            Debug.Log("End dialogue");
-            tLoader.StartTransition();
-
-
-
+            tLoader.StartTransition("MainScene");
+            Destroy(gameObject);
         }
     }
 
@@ -97,8 +112,6 @@ public class EndingDialogueScript : MonoBehaviour
         questNum = cb.GetQuestResults();
         wordResult = cb.GetWordResults();
         go.SetActive(false);
-
-        Debug.Log(questNum + " " + wordResult);
     }
 
     void SetText()
@@ -108,6 +121,6 @@ public class EndingDialogueScript : MonoBehaviour
         if (questNum == 1)
             lines = lines_2;
         if (questNum == 2)
-            lines = lines_3;
+            lines = lines_3;       
     }
 }

@@ -18,7 +18,6 @@ public class ConnectionBar : MonoBehaviour
     private QuestHandler qHandler;
 
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -33,8 +32,7 @@ public class ConnectionBar : MonoBehaviour
                 qHandler.quest = quest;
                 qHandler.ResetQuest();
             }
-        }
-        
+        }       
     }
 
     // Update is called once per frame
@@ -43,27 +41,31 @@ public class ConnectionBar : MonoBehaviour
         GetCurrentFill();
     }
 
-
     public void UpdateBar(QuestSO quest)
     {
         if (!(questsCompleted.Contains(quest))) {
             questsCompleted.Add(quest);
             current += 1;    
         }
+        if (current >= maximum)
+        {
+            var player = GameObject.Find("PlayerManager").GetComponent<GameController>();
+            if (player)
+                player.ShowFinishMenu();
+        }
+
     }
 
     public void AddWordResults(WordQuestType word)
     {
         if (!(questWords.Contains(word)))
-        {
             questWords.Add(word);
-        }
+        
     }
 
     // 3 different quest endings based on num completed
     public int GetQuestResults()
     {
-        Debug.Log(maximum / 2);
         if (questsCompleted.Count < (maximum / 2))
             return 0;
         if (questsCompleted.Count < maximum)
@@ -79,8 +81,9 @@ public class ConnectionBar : MonoBehaviour
         {
             int val = (int) word;
             WordQuestInitials initial = (WordQuestInitials)((int)word);
-            result += (nameof(initial));
+            result += (initial.ToString());
         }
+        Debug.Log(result);
         return result;
     }
 

@@ -129,7 +129,6 @@ public class GameController : MonoBehaviour
             tLoader = GameObject.Find("TransitionLoader").GetComponent<TransitionLoader>();
 
             Debug.Log("Yes");
-            //Destroy(GameObject.Find("ConnectionBar"));
             tLoader.StartTransition("EndingScene");
             Destroy(gameObject);
         }
@@ -138,8 +137,6 @@ public class GameController : MonoBehaviour
 
     public void Option(int optionNum)
     {
-        ///*foreach (GameObject button in optionButton)
-        //    button.SetActive(false);*/
         if (onFinishMenu)
             FinishOption(optionNum);
         else
@@ -157,7 +154,6 @@ public class GameController : MonoBehaviour
                 tLoader = GameObject.Find("TransitionLoader").GetComponent<TransitionLoader>();
 
                 Debug.Log("quit");
-                //Destroy(GameObject.Find("ConnectionBar"));
                 tLoader.StartTransition("MainScene");
                 Destroy(gameObject);
             }

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Item_Gojo1
   m_EditorClassIdentifier: 
   actors: 01000000
-  randomActorName: Life-sized cartoon figure
+  randomActorName: Life-sized figure
   dialogue:
   - You found Navier's Jogo figure!
   - (Thankfully, it isn't as heavy as it looks.)

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Item_Gojo
   m_EditorClassIdentifier: 
   actors: 01000000
-  randomActorName: Life-sized cartoon figure
+  randomActorName: Life-sized figure
   dialogue:
   - You recognize this figure from a certain television show.
   optionText: []

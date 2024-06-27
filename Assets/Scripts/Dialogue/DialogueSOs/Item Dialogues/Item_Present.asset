@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Item_Present
   m_EditorClassIdentifier: 
   actors: 01000000
-  randomActorName: Neatly-wrapped present
+  randomActorName: Enormous present
   dialogue:
   - A huge blue box wrapped with a white ribbon.
   optionText: []

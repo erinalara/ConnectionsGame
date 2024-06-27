@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Item_Cam
   m_EditorClassIdentifier: 
   actors: 01000000
-  randomActorName: Expensive-looking camera
+  randomActorName: Expensive camera
   dialogue:
   - A fancy camera from a very popular company.
   optionText: []

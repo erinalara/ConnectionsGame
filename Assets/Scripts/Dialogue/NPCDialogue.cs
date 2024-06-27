@@ -39,7 +39,6 @@ public class NPCDialogue : MonoBehaviour
         
         if (collision.gameObject.tag == "Player" && !dialogueInitiated)
         {
-            //int convoNum = 0;
             player = collision.gameObject.GetComponent<Transform>();
 
             // check quest status

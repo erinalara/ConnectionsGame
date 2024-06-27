@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Item_Present1
   m_EditorClassIdentifier: 
   actors: 01000000
-  randomActorName: Neatly-wrapped present
+  randomActorName: Enormous present
   dialogue:
   - You found Alison's present! Time to show Rion!
   optionText: []

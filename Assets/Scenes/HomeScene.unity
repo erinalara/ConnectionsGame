@@ -12131,7 +12131,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1718983468}
   - component: {fileID: 1718983465}
-  - component: {fileID: 1718983467}
   - component: {fileID: 1718983466}
   m_Layer: 6
   m_Name: no post cam
@@ -12235,14 +12234,6 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
---- !u!81 &1718983467
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1718983464}
-  m_Enabled: 1
 --- !u!4 &1718983468
 Transform:
   m_ObjectHideFlags: 0
@@ -16743,7 +16734,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.8967705}
+  m_Offset: {x: 0, y: 0.8480809}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: -0.11111111}
@@ -16754,7 +16745,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.125, y: 1.418541}
+  m_Size: {x: 1.125, y: 1.0151124}
   m_EdgeRadius: 0
 --- !u!50 &7878350319229359744
 Rigidbody2D:

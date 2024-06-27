@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Resto
   m_EditorClassIdentifier: 
   actors: 01000000
-  randomActorName: Noodles Restaurant
+  randomActorName: Noodles Resto
   dialogue:
-  - Noodles is closed.
+  - Noodles Resto is closed.
   optionText: []
   option0: {fileID: 0}
   option1: {fileID: 0}

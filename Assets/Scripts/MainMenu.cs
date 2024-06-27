@@ -11,16 +11,10 @@ public class MainMenu : MonoBehaviour
     public void PlayGame()
     {
         tLoader.StartTransition();
-        /* tLoader.StartTransition();
-         Debug.Log("Waited");
-         SceneManager.LoadScene("SampleScene");*/
     }
 
     public void QuitGame()
     {
-        Debug.Log("Quitting");
         Application.Quit();
-    }
-
-    
+    }   
 }

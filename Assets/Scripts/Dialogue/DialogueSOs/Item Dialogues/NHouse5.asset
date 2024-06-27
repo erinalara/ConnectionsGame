@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: NHouse5
   m_EditorClassIdentifier: 
   actors: 01000000
-  randomActorName: Navier and Amelia's House
+  randomActorName: Navier/Amelia's House
   dialogue:
   - Navier and Amelia's house is locked.
   optionText: []

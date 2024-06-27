@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Item_Cam1
   m_EditorClassIdentifier: 
   actors: 01000000
-  randomActorName: Expensive-looking camera
+  randomActorName: Expensive camera
   dialogue:
   - You found Tina's camera! Let's get back to Gerald!
   optionText: []

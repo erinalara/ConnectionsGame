@@ -6,7 +6,6 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 
 {
-    //public static PlayerController Instance { get; private set; }
     public TransitionLoader tLoader;
     public Animator animator;
     public float speed;
@@ -15,6 +14,7 @@ public class PlayerController : MonoBehaviour
 
     private PlayerManager playerManager;
     private Vector2 position;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,7 +32,6 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        // ProcessInputs();
         if (!interactionActivated)
         {
             animator.SetBool("interactionActivated", false);
@@ -42,24 +41,6 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("interactionActivated", true);
         
     }
-
-    void Awake()
-    {
-        /*if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else if (Instance != this)
-        {
-            Destroy(this);
-        }*/
-    }
-
-    /*void ProcessInputs()
-    {
-*//*        Vector2 movementDir = (Input.GetAxis("Horizontal"), ProcessInputs().GetAxis("Vertical"));
-*//*    }*/
 
     void Move()
     {
@@ -109,9 +90,7 @@ public class PlayerController : MonoBehaviour
             var gc = GameObject.Find("PlayerManager").GetComponent<GameController>();
             if (gc)
                 gc.ShowFinishMenu();
-
         }
-        
     }
 
     void InitializePosition()
@@ -125,7 +104,4 @@ public class PlayerController : MonoBehaviour
             cam.transform.position = new Vector3(pos.x, pos.y, cam.transform.position.z);
         }
     }
-
-
-
 }

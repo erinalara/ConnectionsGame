@@ -124,15 +124,11 @@ public class AdvancedDialogueManager : MonoBehaviour
         if (portrait.sprite == null)
             portrait.color = new Color32(0,0,0,0);
 
-
-
-
         // Check for option branch
         if (currentConversation.actors[stepNum] == DialogueActors.Branch)
         {
             for (int i = 0; i < currentConversation.optionText.Length; i++)
             {
-
                 if (currentConversation.optionText[i] == null)
                     optionButton[i].SetActive(false);
                 else
@@ -140,16 +136,12 @@ public class AdvancedDialogueManager : MonoBehaviour
                     optionButtonText[i].text = currentConversation.optionText[i];
                     optionButton[i].SetActive(true);
                 }
-
-                optionButton[0].GetComponent<Button>().Select();
-                
+                optionButton[0].GetComponent<Button>().Select();     
             }
         }
-
-        
+       
         if (typeRoutine != null)
             StopCoroutine(typeRoutine);
-
 
         if (stepNum < currentConversation.dialogue.Length)
             typeRoutine = StartCoroutine(TypeWriterEffect(dialogueText.text = currentConversation.dialogue[stepNum]));
@@ -158,9 +150,6 @@ public class AdvancedDialogueManager : MonoBehaviour
 
         dialogueCanvas.SetActive(true);
         stepNum+=1;
-
-
-
     }
 
     void SetActorInfo(bool recurringCharacter)
@@ -183,8 +172,7 @@ public class AdvancedDialogueManager : MonoBehaviour
             currentSpeaker = currentConversation.randomActorName;
             currPortrait = null;
             actor_name = "";
-        }
-           
+        }       
     }
 
     public void Option(int optionNum)
@@ -224,11 +212,9 @@ public class AdvancedDialogueManager : MonoBehaviour
     public void InitiateDialogue(NPCDialogue npcDialogue, int convoNum)
     {
         // array we are stepping through
-
         currentConversation = npcDialogue.conversation[convoNum];
         dialogueActivated = true;
-        this.npcDialogue = npcDialogue;
-        
+        this.npcDialogue = npcDialogue;       
     }
 
     public void TurnOffDialogue()
@@ -251,32 +237,6 @@ public class AdvancedDialogueManager : MonoBehaviour
             questHandler.EvaluateQuestStatus(currentConversation.updatedQuestStatus, currentConversation.userChoice);           
         }
     }
-
-    /*public void UpdateQuest()
-    {
-        if (currentConversation.quest != null)
-        {
-            if (actor_name == "")
-                actor_name = currentConversation.quest.itemName;
-            var questHandler = GameObject.Find(actor_name).transform.Find("QuestHandler").GetComponent<QuestHandler>();
-
-            questHandler.UpdateStatus(currentConversation.updatedQuestStatus);
-
-        }
-    }*/
-
-    /*public bool CheckQuest()
-    {
-        if (currentConversation.quest != null)
-        {
-
-            int qType = (int) currentConversation.quest.qType;
-            if (qType == 0)
-                return true;
-        }
-        return false;
-
-    }*/
 }
 
 public enum DialogueActors
@@ -296,6 +256,4 @@ public enum DialogueActors
     NPC_10,
     NPC_11,
     NPC_12,
-
-
 };
