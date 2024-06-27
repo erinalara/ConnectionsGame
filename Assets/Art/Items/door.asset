@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: slide
+  m_Name: door
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: -4658000876591298980, guid: ba21e9294bb1f314485fa7f3a56030f7, type: 3}
+  m_Sprite: {fileID: -4382223507357933144, guid: ff2977048d3f47942a7c0dd140e77f9b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1

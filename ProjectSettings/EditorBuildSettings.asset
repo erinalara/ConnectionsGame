@@ -44,4 +44,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/NHouse2.unity
     guid: 2b8eeee83586d1449acfee6932f39a0d
+  - enabled: 1
+    path: Assets/Scenes/EndingScene.unity
+    guid: 5aa84148c2b843e459931b55aa5c20af
   m_configObjects: {}

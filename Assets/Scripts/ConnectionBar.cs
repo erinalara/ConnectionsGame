@@ -60,6 +60,30 @@ public class ConnectionBar : MonoBehaviour
         }
     }
 
+    // 3 different quest endings based on num completed
+    public int GetQuestResults()
+    {
+        Debug.Log(maximum / 2);
+        if (questsCompleted.Count < (maximum / 2))
+            return 0;
+        if (questsCompleted.Count < maximum)
+            return 1;
+        // Completed all 9 quests        
+        return 2;
+    }
+
+    public string GetWordResults()
+    {
+        string result = "";
+        foreach (WordQuestType word in questWords)
+        {
+            int val = (int) word;
+            WordQuestInitials initial = (WordQuestInitials)((int)word);
+            result += (nameof(initial));
+        }
+        return result;
+    }
+
     void GetCurrentFill()
     {
         float fillAmount = (float) current/ (float) maximum;

@@ -16854,7 +16854,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transition: {fileID: 9009004718258165303}
-  transitionTime: 6
+  transitionTime: 1
 --- !u!212 &3626916397785495959
 SpriteRenderer:
   m_ObjectHideFlags: 0

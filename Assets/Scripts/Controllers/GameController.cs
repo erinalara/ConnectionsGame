@@ -11,8 +11,6 @@ public class GameController : MonoBehaviour
     // UI references
     private GameObject gameMenu;
     private TransitionLoader tLoader;
-
-
     private TMP_Text menuText;
 
     // Button references
@@ -21,10 +19,12 @@ public class GameController : MonoBehaviour
     private GameObject optionsPanel;
     private GameObject menuPanel;
     private PlayerController player;
+    private bool onFinishMenu;
 
     // Start is called before the first frame update
     void Start()
     {
+        onFinishMenu = false;
         tLoader = GameObject.Find("TransitionLoader").GetComponent<TransitionLoader>();
         player = GameObject.Find("Player").GetComponent<PlayerController>();
 
@@ -48,10 +48,8 @@ public class GameController : MonoBehaviour
         }
 
         gameMenu = GameObject.Find("GameMenu");
-
         menuText = GameObject.Find("/PlayerManager/GameMenu/MenuPanel/MenuText").GetComponent<TMP_Text>();
         gameMenu.SetActive(false);
-
     }
 
     // Update is called once per frame
@@ -65,14 +63,11 @@ public class GameController : MonoBehaviour
             ResetMenuText();
             ShowMenu();
         }
-        
-        
     }
 
     void HideMenu()
     {
         gameMenu.SetActive(false);
-
     }
 
     void ShowMenu()
@@ -85,7 +80,6 @@ public class GameController : MonoBehaviour
         {
             optionButton[i].SetActive(true);
             optionButton[0].GetComponent<Button>().Select();
-
         }
     }
 
@@ -95,11 +89,11 @@ public class GameController : MonoBehaviour
         optionButtonText[0].SetText("Resume");
         optionButtonText[1].SetText("Quit");
         menuText.SetText("Game Paused");
-
     }
 
     public void ShowFinishMenu()
     {
+        onFinishMenu = true;
         player = GameObject.Find("Player").GetComponent<PlayerController>();
         player.interactionActivated = true;
 
@@ -107,7 +101,6 @@ public class GameController : MonoBehaviour
         optionButtonText[0].SetText("No");
         optionButtonText[1].SetText("Yes");
         menuText.SetText("End the day?");
-
 
         menuPanel.SetActive(true);
         gameMenu.SetActive(true);
@@ -130,15 +123,14 @@ public class GameController : MonoBehaviour
             Debug.Log("No");
             player.interactionActivated = false;
 
-
         }
         if (optionNum == 1)
         {
             tLoader = GameObject.Find("TransitionLoader").GetComponent<TransitionLoader>();
 
             Debug.Log("Yes");
-            Destroy(GameObject.Find("ConnectionBar"));
-            tLoader.StartTransition("MainScene");
+            //Destroy(GameObject.Find("ConnectionBar"));
+            tLoader.StartTransition("EndingScene");
             Destroy(gameObject);
         }
         gameMenu.SetActive(false);
@@ -148,26 +140,28 @@ public class GameController : MonoBehaviour
     {
         ///*foreach (GameObject button in optionButton)
         //    button.SetActive(false);*/
-        player = GameObject.Find("Player").GetComponent<PlayerController>();
-
-        if (optionNum == 0)
+        if (onFinishMenu)
+            FinishOption(optionNum);
+        else
         {
-            Debug.Log("resume");
-            player.interactionActivated = false;
+            player = GameObject.Find("Player").GetComponent<PlayerController>();
 
+            if (optionNum == 0)
+            {
+                Debug.Log("resume");
+                player.interactionActivated = false;
+
+            }
+            if (optionNum == 1)
+            {
+                tLoader = GameObject.Find("TransitionLoader").GetComponent<TransitionLoader>();
+
+                Debug.Log("quit");
+                //Destroy(GameObject.Find("ConnectionBar"));
+                tLoader.StartTransition("MainScene");
+                Destroy(gameObject);
+            }
+            gameMenu.SetActive(false);
         }
-        if (optionNum == 1)
-        {
-            tLoader = GameObject.Find("TransitionLoader").GetComponent<TransitionLoader>();
-
-            Debug.Log("quit");
-            Destroy(GameObject.Find("ConnectionBar"));
-            tLoader.StartTransition("MainScene");
-            Destroy(gameObject);
-        }
-        gameMenu.SetActive(false);
-
-
-
     }
 }

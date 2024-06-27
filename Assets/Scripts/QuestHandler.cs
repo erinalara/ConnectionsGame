@@ -185,3 +185,15 @@ public enum WordQuestType
     Perceiver,
     Judger
 };
+
+public enum WordQuestInitials
+{
+    I,
+    E,
+    S,
+    N,
+    F,
+    T,
+    P,
+    J
+};

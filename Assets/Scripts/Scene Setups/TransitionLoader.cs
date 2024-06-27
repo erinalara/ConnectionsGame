@@ -67,5 +67,6 @@ public enum TransitionScenes
     Building_1,
     NHouse4,
     NHouse2,
+    EndingScene,
 
 };

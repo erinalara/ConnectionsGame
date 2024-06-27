@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 755bc9f55e4ae534f995d543eb92d726
+guid: 12dc7d0f8f377fa43bdaf8f4980941e7
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -95,7 +95,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638508058189125371
+  platformSettingsDirtyTick: 638550067490829899
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -119,18 +119,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: rose
+  - name: Untitled_3_2_2_Frame_0
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.5, y: -0.06}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 16
-      height: 15
-    spriteID: b0cf140868af44b4b990f82c6b431b0b
+      width: 46
+      height: 50
+    spriteID: 96a2b386ea182154e9b9e48b2b4265f0
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -139,23 +139,107 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
+  - name: Untitled_3_2_2_Frame_1
+    originalName: 
+    pivot: {x: 0.5, y: -0.06}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 58
+      y: 4
+      width: 46
+      height: 50
+    spriteID: 4c0319a875949ec42a9d374177d5a52c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 58, y: 4}
+  - name: Untitled_3_2_2_Frame_2
+    originalName: 
+    pivot: {x: 0.5, y: -0.06}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 62
+      width: 46
+      height: 50
+    spriteID: 02001c70614646e409726f8700510e8d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 62}
+  - name: Untitled_3_2_2_Frame_3
+    originalName: 
+    pivot: {x: 0.5, y: -0.06}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 58
+      y: 62
+      width: 46
+      height: 50
+    spriteID: 5deb42e5b3822a046bbba5a0eb63e359
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 58, y: 62}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1185244733
-    name: rose
+    guid: -1249627557
+    name: Untitled_3_2_2
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: rose
+    - name: Untitled_3_2_2_Frame_0
       frameIndex: 0
       cellRect:
-        x: 0
-        y: 0
-        width: 16
-        height: 15
-      spriteId: b0cf140868af44b4b990f82c6b431b0b
+        x: 9
+        y: 3
+        width: 46
+        height: 50
+      spriteId: 96a2b386ea182154e9b9e48b2b4265f0
+    - name: Untitled_3_2_2_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 9
+        y: 3
+        width: 46
+        height: 50
+      spriteId: 4c0319a875949ec42a9d374177d5a52c
+    - name: Untitled_3_2_2_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 9
+        y: 3
+        width: 46
+        height: 50
+      spriteId: 02001c70614646e409726f8700510e8d
+    - name: Untitled_3_2_2_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 9
+        y: 3
+        width: 46
+        height: 50
+      spriteId: 5deb42e5b3822a046bbba5a0eb63e359
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -209,4 +293,4 @@ ScriptedImporter:
     androidETC2FallbackOverride: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 16, y: 16}
+  canvasSize: {x: 64, y: 64}
