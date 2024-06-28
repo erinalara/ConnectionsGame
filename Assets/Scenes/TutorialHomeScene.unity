@@ -12086,7 +12086,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 6d85ea1bfa73dd0448049b97fdc9c554, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.075
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -12182,8 +12182,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af3e938d53d9aa94dbcd4795e5e5d316, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeInTime: 4
-  fadeOutTime: 4
+  fadeInTime: 5
+  fadeOutTime: 2
 --- !u!1 &1428179312
 GameObject:
   m_ObjectHideFlags: 0

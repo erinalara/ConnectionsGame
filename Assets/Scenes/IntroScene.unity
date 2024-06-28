@@ -824,7 +824,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 93c603f59de64ed4caa1570548af5dd0, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
@@ -937,7 +937,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeInTime: 3
-  fadeOutTime: 4
+  fadeOutTime: 3
 --- !u!114 &1177446029605937335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -951,7 +951,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transition: {fileID: 1754398539994501732}
-  transitionTime: 6
+  transitionTime: 4
 --- !u!95 &1754398539994501732
 Animator:
   serializedVersion: 5

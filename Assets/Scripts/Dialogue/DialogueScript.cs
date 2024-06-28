@@ -22,11 +22,10 @@ public class DialogueScript : MonoBehaviour
     {
         textComponent.text = string.Empty;
         Invoke("StartDialogue", startDelay);
-        if (music)
-        {
-            musicController = music.GetComponent<AudioController>();
-            musicController.FadeIn();
-        }
+        
+        musicController = music.GetComponent<AudioController>();
+        StartCoroutine(musicController.FadeIn());
+
     }
 
     // Update is called once per frame
@@ -39,8 +38,8 @@ public class DialogueScript : MonoBehaviour
             }
             else
             {
-                if (music)
-                    StartCoroutine(musicController.FadeOut());
+                
+                StartCoroutine(musicController.FadeOut());
                 StopAllCoroutines();
                 textComponent.text = lines[index];
                 

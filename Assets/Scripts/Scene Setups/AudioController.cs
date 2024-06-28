@@ -21,12 +21,6 @@ public class AudioController : MonoBehaviour
         
     }
 
-    /*public void FadeIn()
-    {
-        music = gameObject.GetComponent<AudioSource>();
-        music.PlayDelayed(fadeInTime);
-    }*/
-
     public IEnumerator FadeIn()
     {
         music = gameObject.GetComponent<AudioSource>();
