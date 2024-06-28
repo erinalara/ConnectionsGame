@@ -19,7 +19,6 @@ public class NPCDialogue : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private GameObject npc;
 
-
     private QuestHandler questHandler;
 
     // Start is called before the first frame update
@@ -41,35 +40,58 @@ public class NPCDialogue : MonoBehaviour
 
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    void Update()
     {
         
-        if (collision.gameObject.tag == "Player" && !dialogueInitiated)
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
         {
-            player = collision.gameObject.GetComponent<Transform>();
+            while (!dialogueInitiated)
+            {
+                player = collision.gameObject.GetComponent<Transform>();
 
-            // check quest status
-            int convoNum = (questHandler == null) ? 0: questHandler.CheckQuestStatus();
-            if (convoNum > conversation.Length-1)
-                convoNum = 0;
-            // initiate convo
-            advancedDialogueManager.InitiateDialogue(this, convoNum);
-            dialogueInitiated = true;
-            // Check player direction
-            //ChangeDirection(player, npc_sprite);
+                // check quest status
+                /*int convoNum = (questHandler == null) ? 0: questHandler.CheckQuestStatus();
+                if (convoNum > conversation.Length-1)
+                    convoNum = 0;*/
 
+                // initiate convo
+                advancedDialogueManager.InitiateDialogue(this, GetQuestConvo());
+                //dialogueInitiated = true;
+                // Check player direction
+                //ChangeDirection(player, npc_sprite);
+            }
+            
+
+
+        }
+    }
+
+    public void InteractAgain()
+    {
+        // repeat convo if button press again
+        if ((Input.GetButtonDown("Interact")) && (GetDialogueFlag()))
+        {
+            int checkConvo = GetQuestConvo();
+            advancedDialogueManager.InitiateDialogue(this, checkConvo);
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
-        {           
-            advancedDialogueManager.TurnOffDialogue();
-            dialogueInitiated = false;
-            spriteRenderer.sprite = positionBottom;
-     
-        }
+        dialogueInitiated = false;
+    }
+
+    public int GetQuestConvo()
+    {
+        // check quest status
+        int convoNum = (questHandler == null) ? 0 : questHandler.CheckQuestStatus();
+        if (convoNum > conversation.Length - 1)
+            convoNum = 0;
+        return convoNum;
     }
 
     public void ChangeDirection()
@@ -84,5 +106,20 @@ public class NPCDialogue : MonoBehaviour
         else if (npc_sprite.position.y <= player.position.y && xdiff < ydiff)
             spriteRenderer.sprite = positionTop;
         
+    }
+
+    public void UpdateDialogueFlag(bool flag)
+    {
+        dialogueInitiated = flag;
+    }
+
+    public bool GetDialogueFlag()
+    {
+        return dialogueInitiated;
+    }
+
+    public void UpdatePosition(Sprite position)
+    {
+        spriteRenderer.sprite = position;
     }
 }
