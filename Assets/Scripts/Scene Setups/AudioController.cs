@@ -6,13 +6,14 @@ public class AudioController : MonoBehaviour
 {
     public float fadeInTime;
     public float fadeOutTime;
+    public float volume;
 
     private AudioSource music;
     // Start is called before the first frame update
     void Start()
     {
         music = gameObject.GetComponent<AudioSource>();
-        music.volume = 1f;
+        music.volume = volume;
     }
 
     // Update is called once per frame
@@ -24,7 +25,7 @@ public class AudioController : MonoBehaviour
     public IEnumerator FadeIn()
     {
         music = gameObject.GetComponent<AudioSource>();
-        music.volume = 1f;
+        music.volume = volume;
         float startVolume = music.volume;
         music.volume = 0;
         music.Play();

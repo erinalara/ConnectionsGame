@@ -15,7 +15,8 @@ public class DialogueScript : MonoBehaviour
     public GameObject music;
 
     private int index;
-    private AudioController musicController; 
+    private AudioController musicController;
+    private IEnumerator coroutine;
 
     // Start is called before the first frame update
     void Start()
@@ -51,7 +52,12 @@ public class DialogueScript : MonoBehaviour
     void StartDialogue()
     {
         index = 0;
-        StartCoroutine(TypeLine());
+        coroutine = TypeLine();
+        StartCoroutine(coroutine);
+        if (coroutine != null)
+        {
+            StopCoroutine(coroutine);
+        }
     }
 
     IEnumerator TypeLine()

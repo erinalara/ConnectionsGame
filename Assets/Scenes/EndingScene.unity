@@ -1402,6 +1402,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeInTime: 1
   fadeOutTime: 2
+  volume: 0.08
 --- !u!1 &2089479195
 GameObject:
   m_ObjectHideFlags: 0
