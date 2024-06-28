@@ -17,9 +17,8 @@ MonoBehaviour:
   dialogue:
   - "How do you typically recharge or unwind after a long day?\r"
   optionText:
-  - By spending time alone, engaging in solitary activities like reading or listening
-    to music
-  - By socializing with friends or family, going out to events, or talking with others
+  - Spend time alone, reading or music-listening.
+  - Hang out with friends and family.
   option0: {fileID: 11400000, guid: c364a0fd54b198349831e94667d1ec0b, type: 2}
   option1: {fileID: 11400000, guid: 0585eae8f88d4094fbb4d9aa97738117, type: 2}
   option2: {fileID: 0}

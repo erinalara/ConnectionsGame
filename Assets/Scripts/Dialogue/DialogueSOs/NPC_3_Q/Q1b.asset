@@ -15,11 +15,10 @@ MonoBehaviour:
   actors: 0500000002000000
   randomActorName: 
   dialogue:
-  - 'In group settings, do you tend to:'
+  - In group settings, which do you do more?
   optionText:
-  - Feel more comfortable observing and listening before actively participating in
-    conversations
-  - Feel energized by interacting with others and enjoy being in the center of attention?
+  - Actively listen and observe the conversation.
+  - Speak out frequently and engage in conversations.
   option0: {fileID: 11400000, guid: de888f2f427406e4cae2483758eb701b, type: 2}
   option1: {fileID: 11400000, guid: 3d5217c34d898be498b8cae1bc902a65, type: 2}
   option2: {fileID: 0}

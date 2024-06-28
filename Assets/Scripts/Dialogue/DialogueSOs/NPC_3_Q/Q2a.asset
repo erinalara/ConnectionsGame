@@ -17,8 +17,8 @@ MonoBehaviour:
   dialogue:
   - 'A unique movie that only you''re into, has just released. Would you rather:'
   optionText:
-  - Wait until it becomes available online to watch at home.
-  - Drag one of your closest friends to watch it with you.
+  - Wait until it's online to watch at home.
+  - Drag one of your friends to watch it with you.
   option0: {fileID: 11400000, guid: 5c330c586a8566c48accae221185d047, type: 2}
   option1: {fileID: 11400000, guid: f2c466732386d1a4d93d7fafede7e9e9, type: 2}
   option2: {fileID: 0}

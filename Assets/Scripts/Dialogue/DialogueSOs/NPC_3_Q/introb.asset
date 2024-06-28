@@ -15,7 +15,7 @@ MonoBehaviour:
   actors: 05000000
   randomActorName: 
   dialogue:
-  - darn.
+  - Darn, it's okay.
   optionText: []
   option0: {fileID: 0}
   option1: {fileID: 0}

@@ -17,10 +17,8 @@ MonoBehaviour:
   dialogue:
   - 'Which statement resonates more with you:'
   optionText:
-  - I enjoy exploring the tangible world around me and paying attention to my immediate
-    surroundings.
-  - I often find myself lost in thought, contemplating abstract concepts and imagining
-    future possibilities.
+  - I focus on the here-and-now, and anything around me.
+  - I'm often lost in thought, thinking about the future.
   option0: {fileID: 11400000, guid: 269f2df1f62483545ae947d6d7db0d34, type: 2}
   option1: {fileID: 11400000, guid: 97d9a5fa42f328a4f8b630400e395105, type: 2}
   option2: {fileID: 0}

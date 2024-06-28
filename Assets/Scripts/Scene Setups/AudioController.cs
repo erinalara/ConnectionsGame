@@ -24,6 +24,7 @@ public class AudioController : MonoBehaviour
     public IEnumerator FadeIn()
     {
         music = gameObject.GetComponent<AudioSource>();
+        music.volume = 1f;
         float startVolume = music.volume;
         music.volume = 0;
         music.Play();

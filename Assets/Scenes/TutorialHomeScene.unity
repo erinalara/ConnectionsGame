@@ -13063,7 +13063,7 @@ MonoBehaviour:
   tLoader: {fileID: 2108592484213532450}
   lines:
   - Move around using the arrow keys.
-  - Interact with either the 'A' or 'I' keys.
+  - Interact with either the mouse, or 'enter' key.
   - The Connections bar at the top fills if you help people in your town.
   - Go back to bed when you're ready to end.
   textSpeed: 0.05

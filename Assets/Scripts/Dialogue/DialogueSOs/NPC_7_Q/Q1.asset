@@ -17,8 +17,8 @@ MonoBehaviour:
   dialogue:
   - "When faced with a problem, do you prefer to:\r"
   optionText:
-  - Rely on concrete facts and details to analyze the situation?
-  - Trust your intuition and focus on the big picture to understand the situation?
+  - Analyze all the facts.
+  - Rely on intuition and focus on the big picture.
   option0: {fileID: 11400000, guid: 952f16c02a307524cbb267bc3aafa70e, type: 2}
   option1: {fileID: 11400000, guid: 9397f1c5790b5ed45b579da07cdbf001, type: 2}
   option2: {fileID: 0}

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Item_Glasses1
   m_EditorClassIdentifier: 
   actors: 01000000
-  randomActorName: Someone's glasses
+  randomActorName: Glasses
   dialogue:
   - You found Alison's glasses!
   optionText: []
