@@ -924,6 +924,7 @@ MonoBehaviour:
   positionTop: {fileID: -7592616024309148970, guid: dd740fff37886d447a201a498e4f3b05, type: 3}
   positionBottom: {fileID: -7592616024309148970, guid: dd740fff37886d447a201a498e4f3b05, type: 3}
   isPopUpInfo: 0
+  isItem: 0
 --- !u!1 &476623894
 GameObject:
   m_ObjectHideFlags: 0
@@ -1837,6 +1838,7 @@ MonoBehaviour:
   positionTop: {fileID: 1735498273492767799, guid: 97949e7bda791934a89e1d39b8350e61, type: 3}
   positionBottom: {fileID: 1735498273492767799, guid: 97949e7bda791934a89e1d39b8350e61, type: 3}
   isPopUpInfo: 0
+  isItem: 0
 --- !u!1 &824027640
 GameObject:
   m_ObjectHideFlags: 0
@@ -2091,6 +2093,7 @@ MonoBehaviour:
   positionTop: {fileID: 8853054164006011650, guid: 7820e0b7301a99845942ea4d1baef858, type: 3}
   positionBottom: {fileID: 8853054164006011650, guid: 7820e0b7301a99845942ea4d1baef858, type: 3}
   isPopUpInfo: 0
+  isItem: 0
 --- !u!213 &1063426735
 Sprite:
   m_ObjectHideFlags: 0
@@ -2346,7 +2349,7 @@ Rigidbody2D:
     serializedVersion: 2
     m_Bits: 0
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 0
   m_CollisionDetection: 0
   m_Constraints: 4
 --- !u!61 &1123633122
@@ -16146,6 +16149,7 @@ MonoBehaviour:
   positionTop: {fileID: -7592616024309148970, guid: dd740fff37886d447a201a498e4f3b05, type: 3}
   positionBottom: {fileID: -7592616024309148970, guid: dd740fff37886d447a201a498e4f3b05, type: 3}
   isPopUpInfo: 0
+  isItem: 0
 --- !u!1 &1559116340
 GameObject:
   m_ObjectHideFlags: 0

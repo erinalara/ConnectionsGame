@@ -90,15 +90,10 @@ public class AdvancedDialogueManager : MonoBehaviour
             // cancel dialogue
             if (stepNum >= currentConversation.actors.Length)
             {
-                EvaluateQuest();
-
                 TurnOffDialogue();
-                /*var x = CheckQuest();
-                if (x)*/
-                
-                
+
+                EvaluateQuest();
             }
-            
             // continue dialogue
             else
                 PlayDialogue();
@@ -222,21 +217,14 @@ public class AdvancedDialogueManager : MonoBehaviour
     {
         stepNum = 0;
         dialogueActivated = false;
-        //npcDialogue.UpdateDialogueFlag(false);
+
+        npcDialogue.UpdateDialogueFlag(false);
         npcDialogue.UpdatePosition(npcDialogue.positionBottom);
 
         optionsPanel.SetActive(false);
         dialogueCanvas.SetActive(false);
         // let player move again
         player.interactionActivated = false;
-
-        /*// repeat convo if button press again
-        if ((Input.GetButtonDown("Interact")) && (npcDialogue.GetDialogueFlag()))
-        {
-            stepNum = 0;
-            int checkConvo = npcDialogue.GetQuestConvo();
-            InitiateDialogue(npcDialogue, checkConvo);
-        }*/
     }
 
     public void EvaluateQuest()

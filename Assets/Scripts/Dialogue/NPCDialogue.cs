@@ -40,49 +40,24 @@ public class NPCDialogue : MonoBehaviour
 
     }
 
-    void Update()
-    {
-        
-    }
-
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
-        {
-            while (!dialogueInitiated)
-            {
-                player = collision.gameObject.GetComponent<Transform>();
+        if ((collision.gameObject.tag == "Player") && (!dialogueInitiated))
+        {           
+            player = collision.gameObject.GetComponent<Transform>();
 
-                // check quest status
-                /*int convoNum = (questHandler == null) ? 0: questHandler.CheckQuestStatus();
-                if (convoNum > conversation.Length-1)
-                    convoNum = 0;*/
-
-                // initiate convo
-                advancedDialogueManager.InitiateDialogue(this, GetQuestConvo());
-                //dialogueInitiated = true;
-                // Check player direction
-                //ChangeDirection(player, npc_sprite);
-            }
-            
-
-
-        }
-    }
-
-    public void InteractAgain()
-    {
-        // repeat convo if button press again
-        if ((Input.GetButtonDown("Interact")) && (GetDialogueFlag()))
-        {
-            int checkConvo = GetQuestConvo();
-            advancedDialogueManager.InitiateDialogue(this, checkConvo);
+            // initiate convo
+            advancedDialogueManager.InitiateDialogue(this, GetQuestConvo());
+            dialogueInitiated = true;                          
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        dialogueInitiated = false;
+        if (collision.gameObject.tag == "Player")
+        {
+            dialogueInitiated = false;
+        }
     }
 
     public int GetQuestConvo()
@@ -111,11 +86,6 @@ public class NPCDialogue : MonoBehaviour
     public void UpdateDialogueFlag(bool flag)
     {
         dialogueInitiated = flag;
-    }
-
-    public bool GetDialogueFlag()
-    {
-        return dialogueInitiated;
     }
 
     public void UpdatePosition(Sprite position)
