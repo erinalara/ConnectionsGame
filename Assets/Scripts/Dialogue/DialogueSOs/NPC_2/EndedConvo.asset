@@ -12,13 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9da1bc3d27925bd438e5cf6d175ac213, type: 3}
   m_Name: EndedConvo
   m_EditorClassIdentifier: 
-  actors: 04000000
+  actors: 0400000004000000
   randomActorName: 
   dialogue:
   - Thanks so much for your help again!
+  - Ted is at the groomers right now, but you should say hi sometime!
   optionText: []
   option0: {fileID: 0}
   option1: {fileID: 0}
   option2: {fileID: 0}
   updatedQuestStatus: 3
+  userChoice: 0
   quest: {fileID: 11400000, guid: 01b707fd866a80344a02bf253998ae1f, type: 2}

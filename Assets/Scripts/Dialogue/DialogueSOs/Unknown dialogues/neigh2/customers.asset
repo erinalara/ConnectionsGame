@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9da1bc3d27925bd438e5cf6d175ac213, type: 3}
+  m_Name: customers
+  m_EditorClassIdentifier: 
+  actors: 01000000
+  randomActorName: Customers
+  dialogue:
+  - The customers look like good friends.
+  optionText: []
+  option0: {fileID: 0}
+  option1: {fileID: 0}
+  option2: {fileID: 0}
+  updatedQuestStatus: 0
+  userChoice: 0
+  quest: {fileID: 0}

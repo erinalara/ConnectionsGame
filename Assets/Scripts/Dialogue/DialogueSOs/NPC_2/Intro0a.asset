@@ -15,7 +15,7 @@ MonoBehaviour:
   actors: 0400000004000000
   randomActorName: 
   dialogue:
-  - You're a lifesaver! My dog, Ted, suddenly threw my glasses somewhere and I can't
+  - You're so kind! My dog, Ted, suddenly threw my glasses somewhere and I can't
     find them.
   - Please let me know if you see them!
   optionText: []

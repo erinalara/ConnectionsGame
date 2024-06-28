@@ -58,6 +58,10 @@ public class QuestHandler : MonoBehaviour
             {
                 UpdateBar();
             }
+            if (quest.qType == QuestType.Scavenger && quest.status == QuestStatus.Completed)
+            {
+                this.transform.parent.gameObject.SetActive(false);
+            }
 
             else if (quest.qType == QuestType.WordChoice)
             {
