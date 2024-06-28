@@ -600,6 +600,7 @@ MonoBehaviour:
   positionTop: {fileID: -5310051038803809657, guid: 30f9235a64196e04993aa0d570a985f3, type: 3}
   positionBottom: {fileID: -5310051038803809657, guid: 30f9235a64196e04993aa0d570a985f3, type: 3}
   isPopUpInfo: 0
+  isItem: 1
 --- !u!1 &193929856
 GameObject:
   m_ObjectHideFlags: 0
@@ -697,6 +698,7 @@ MonoBehaviour:
   positionTop: {fileID: -4961181520316642746, guid: 33cd2ae7ff2f42d4eb8d50629a6fb989, type: 3}
   positionBottom: {fileID: -4961181520316642746, guid: 33cd2ae7ff2f42d4eb8d50629a6fb989, type: 3}
   isPopUpInfo: 0
+  isItem: 0
 --- !u!1 &210145842
 GameObject:
   m_ObjectHideFlags: 0
@@ -3211,6 +3213,7 @@ MonoBehaviour:
   positionTop: {fileID: -4961181520316642746, guid: 33cd2ae7ff2f42d4eb8d50629a6fb989, type: 3}
   positionBottom: {fileID: -4961181520316642746, guid: 33cd2ae7ff2f42d4eb8d50629a6fb989, type: 3}
   isPopUpInfo: 0
+  isItem: 0
 --- !u!1 &1051403469
 GameObject:
   m_ObjectHideFlags: 0
@@ -15723,6 +15726,7 @@ MonoBehaviour:
   positionTop: {fileID: -4961181520316642746, guid: 33cd2ae7ff2f42d4eb8d50629a6fb989, type: 3}
   positionBottom: {fileID: -4961181520316642746, guid: 33cd2ae7ff2f42d4eb8d50629a6fb989, type: 3}
   isPopUpInfo: 0
+  isItem: 0
 --- !u!1 &1674531172
 GameObject:
   m_ObjectHideFlags: 0
@@ -15980,6 +15984,7 @@ MonoBehaviour:
   positionTop: {fileID: -4961181520316642746, guid: 33cd2ae7ff2f42d4eb8d50629a6fb989, type: 3}
   positionBottom: {fileID: -4961181520316642746, guid: 33cd2ae7ff2f42d4eb8d50629a6fb989, type: 3}
   isPopUpInfo: 0
+  isItem: 0
 --- !u!1 &1786455783
 GameObject:
   m_ObjectHideFlags: 0

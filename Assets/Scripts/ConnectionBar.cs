@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -76,14 +77,16 @@ public class ConnectionBar : MonoBehaviour
 
     public string GetWordResults()
     {
+        // Sort by order of int
+
         string result = "";
-        foreach (WordQuestType word in questWords)
+        List <WordQuestType> sorted = questWords.OrderBy(x => x).ToList();
+        foreach (WordQuestType word in sorted)
         {
             int val = (int) word;
             WordQuestInitials initial = (WordQuestInitials)((int)word);
             result += (initial.ToString());
         }
-        Debug.Log(result);
         return result;
     }
 

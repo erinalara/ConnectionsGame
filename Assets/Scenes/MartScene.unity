@@ -1016,6 +1016,7 @@ MonoBehaviour:
   positionTop: {fileID: -4961181520316642746, guid: 33cd2ae7ff2f42d4eb8d50629a6fb989, type: 3}
   positionBottom: {fileID: -4961181520316642746, guid: 33cd2ae7ff2f42d4eb8d50629a6fb989, type: 3}
   isPopUpInfo: 0
+  isItem: 0
 --- !u!1 &743430766
 GameObject:
   m_ObjectHideFlags: 0
@@ -1426,6 +1427,7 @@ MonoBehaviour:
   positionTop: {fileID: -1288345184860569199, guid: 76c21e8fd1dd56741b1820e484e517b2, type: 3}
   positionBottom: {fileID: -1288345184860569199, guid: 76c21e8fd1dd56741b1820e484e517b2, type: 3}
   isPopUpInfo: 0
+  isItem: 1
 --- !u!1 &814982008
 GameObject:
   m_ObjectHideFlags: 0
@@ -4678,6 +4680,7 @@ MonoBehaviour:
   positionTop: {fileID: -4961181520316642746, guid: 33cd2ae7ff2f42d4eb8d50629a6fb989, type: 3}
   positionBottom: {fileID: -4961181520316642746, guid: 33cd2ae7ff2f42d4eb8d50629a6fb989, type: 3}
   isPopUpInfo: 0
+  isItem: 0
 --- !u!1 &1324059142
 GameObject:
   m_ObjectHideFlags: 0

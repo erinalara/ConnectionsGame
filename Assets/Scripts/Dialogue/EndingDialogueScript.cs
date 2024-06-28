@@ -30,13 +30,15 @@ public class EndingDialogueScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        chart = GameObject.Find("WordChart");
+        showChart = false;
+        chart.SetActive(false);
+
         questNum = 0;
         EvaluateEndings();
         textComponent.text = string.Empty;
         SetText();
         Invoke("StartDialogue", startDelay);
-        showChart = false;
-        chart = GameObject.Find("WordChart");
 
     }
 
@@ -112,6 +114,7 @@ public class EndingDialogueScript : MonoBehaviour
         questNum = cb.GetQuestResults();
         wordResult = cb.GetWordResults();
         go.SetActive(false);
+        Destroy(go);
     }
 
     void SetText()

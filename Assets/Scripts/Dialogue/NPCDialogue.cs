@@ -10,7 +10,7 @@ public class NPCDialogue : MonoBehaviour
     public Sprite positionTop;
     public Sprite positionBottom;
     public bool isPopUpInfo;
-
+    public bool isItem;
 
     private Transform player;
     private PlayerController p_controller;
@@ -29,9 +29,16 @@ public class NPCDialogue : MonoBehaviour
         npc = this.transform.parent.gameObject;
         spriteRenderer = npc.GetComponent<SpriteRenderer>();
         var obj = npc.transform.Find("QuestHandler");
-        if (obj)
+        if (obj) {
             questHandler = obj.GetComponent<QuestHandler>();
-             
+            QuestStatus status = questHandler.quest.status;
+            if (isItem)
+            {
+                if ((status == QuestStatus.Completed) || (status == QuestStatus.Ended))
+                    this.transform.parent.gameObject.SetActive(false);
+            }
+        }
+
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -61,7 +68,7 @@ public class NPCDialogue : MonoBehaviour
             advancedDialogueManager.TurnOffDialogue();
             dialogueInitiated = false;
             spriteRenderer.sprite = positionBottom;
-
+     
         }
     }
 

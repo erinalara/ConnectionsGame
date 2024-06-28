@@ -6,13 +6,10 @@ public class QuestHandler : MonoBehaviour
 {
 
     public QuestSO quest;
-    //private QuestStatus status;
     private ConnectionBar connectionBar;
 
-    // 
     private int currentQuestNum;
     private bool hasFinished;
-    //private string[] wordChoiceValues;
 
 
     // Start is called before the first frame update
@@ -24,11 +21,6 @@ public class QuestHandler : MonoBehaviour
             connectionBar = _cb.transform.Find("BarCanvas/ProgressBar").GetComponent<ConnectionBar>();
             if (!(connectionBar.questsCompleted.Contains(quest)))
                 hasFinished = false;
-            /*if (connectionBar == null)
-            {
-                EvaluateQuestStatus(QuestStatus.Inactive, WordQuestType.None);
-                hasFinished = false;
-            }*/
         }
         
     }
@@ -36,17 +28,11 @@ public class QuestHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        
-
     }
 
     public void UpdateStatus(QuestStatus qStatus)
     {
-        //Debug.Log(quest.itemName);
-        //Debug.Log(qStatus);
         quest.status = qStatus;
-
     }
 
     public void EvaluateQuestStatus(QuestStatus qStatus, WordQuestType userChoice )
@@ -112,11 +98,8 @@ public class QuestHandler : MonoBehaviour
         connectionBar.UpdateBar(quest);
         hasFinished = true;
         if (quest.qType == QuestType.WordChoice)
-        {
-            //Debug.Log(EvaluateWordResults());
             connectionBar.AddWordResults(EvaluateWordResults());
-        }
-
+        
     }
 
     public bool CheckBarQuests()
@@ -132,34 +115,7 @@ public class QuestHandler : MonoBehaviour
         EvaluateQuestStatus(QuestStatus.Inactive, WordQuestType.None);
         if (quest.qType == QuestType.WordChoice)
             quest.answerResults.Clear();
-        //hasFinished = false;
     }
-
-
-    /*private void OnTriggerStay2D(Collider2D collision)
-    {
-
-        if (collision.gameObject.tag == "Player" && quest.qType == QuestType.WordChoice)
-        {
-            // Start Word Choice Scenes
-            
-        }
-        
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Player" && quest.qType == QuestType.WordChoice)
-        {
-            // update quest status
-
-        }
-        else if (collision.gameObject.tag == "Player" && quest.qType == QuestType.Scavenger)
-        {
-            // Add found item to inventory (?)
-        }
-    }*/
-
 
 }
 
@@ -177,7 +133,7 @@ public enum QuestStatus
     Ended
 };
 
-public enum WordQuestType
+public enum WordQuestType : int
 {
     None,
     Introvert,
@@ -192,6 +148,7 @@ public enum WordQuestType
 
 public enum WordQuestInitials
 {
+    None,
     I,
     E,
     S,

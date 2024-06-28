@@ -13,14 +13,9 @@ public class CarController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        Vector2 position = transform.position;
-        Debug.Log("cam: " + position.x);
-
-        
+        Vector2 position = transform.position;       
         position.x +=  0.001f;
         transform.position = position;
-        
-
         
     }
 }
