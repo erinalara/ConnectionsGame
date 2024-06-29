@@ -116,11 +116,15 @@ public class GameController : MonoBehaviour
 
     public void FinishOption(int optionNum)
     {
+        AdvancedDialogueManager advancedDialogueManager = GameObject.Find("DialogueManager").GetComponent<AdvancedDialogueManager>();
+        if (advancedDialogueManager)
+        {
+            advancedDialogueManager.TurnOffDialogue();
+        }
         player = GameObject.Find("Player").GetComponent<PlayerController>();
 
         if (optionNum == 0)
         {
-            Debug.Log("No");
             player.interactionActivated = false;
 
         }
@@ -128,7 +132,6 @@ public class GameController : MonoBehaviour
         {
             tLoader = GameObject.Find("TransitionLoader").GetComponent<TransitionLoader>();
 
-            Debug.Log("Yes");
             tLoader.StartTransition("EndingScene");
             Destroy(gameObject);
         }
@@ -145,7 +148,6 @@ public class GameController : MonoBehaviour
 
             if (optionNum == 0)
             {
-                Debug.Log("resume");
                 player.interactionActivated = false;
 
             }

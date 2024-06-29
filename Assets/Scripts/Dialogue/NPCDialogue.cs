@@ -82,7 +82,12 @@ public class NPCDialogue : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             dialogueInitiated = false;
+            if (isPopUpInfo)
+            {
+                advancedDialogueManager.TurnOffDialogue();
+            }
         }
+        
     }
 
     public int GetQuestConvo()

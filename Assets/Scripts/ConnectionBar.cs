@@ -52,7 +52,15 @@ public class ConnectionBar : MonoBehaviour
         {
             var player = GameObject.Find("PlayerManager").GetComponent<GameController>();
             if (player)
+            {
+                AdvancedDialogueManager advancedDialogueManager = GameObject.Find("DialogueManager").GetComponent<AdvancedDialogueManager>();
+                if (advancedDialogueManager)
+                {
+                    advancedDialogueManager.TurnOffDialogue();
+                }
+
                 player.ShowFinishMenu();
+            }
         }
 
     }

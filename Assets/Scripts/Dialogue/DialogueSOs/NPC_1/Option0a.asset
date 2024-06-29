@@ -15,9 +15,9 @@ MonoBehaviour:
   actors: 030000000300000002000000
   randomActorName: 
   dialogue:
-  - '*smirks*'
-  - I seem to have lost something important. My one and only son, the most handsome
-    prince charming in the entire world, Pooh. Please, help me find my son!
+  - My one and only son, the most handsome prince charming in the entire world, Pooh,
+    is LOST!
+  - Please, help me find my son!
   optionText:
   - Sure, I'll help you find him!
   - Nah, I'm good.
@@ -25,4 +25,5 @@ MonoBehaviour:
   option1: {fileID: 11400000, guid: 60a983f44a437c548ae7aeacbc86208a, type: 2}
   option2: {fileID: 0}
   updatedQuestStatus: 0
+  userChoice: 0
   quest: {fileID: 0}
