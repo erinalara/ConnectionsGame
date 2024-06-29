@@ -28,7 +28,8 @@ public class NPCDialogue : MonoBehaviour
         npc = this.transform.parent.gameObject;
         spriteRenderer = npc.GetComponent<SpriteRenderer>();
         var obj = npc.transform.Find("QuestHandler");
-        if (obj) {
+        if (obj)
+        {
             questHandler = obj.GetComponent<QuestHandler>();
             QuestStatus status = questHandler.quest.status;
             if (isItem)
@@ -40,15 +41,39 @@ public class NPCDialogue : MonoBehaviour
 
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (isPopUpInfo)
+        {
+            if ((collision.gameObject.tag == "Player") && (!dialogueInitiated))
+            {
+                player = collision.gameObject.GetComponent<Transform>();
+
+                // initiate convo
+                advancedDialogueManager.InitiateDialogue(this, GetQuestConvo());
+
+                dialogueInitiated = true;
+                UpdatePosition(positionBottom);
+
+            }
+        }
+    }
+
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if ((collision.gameObject.tag == "Player") && (!dialogueInitiated))
-        {           
-            player = collision.gameObject.GetComponent<Transform>();
+        if (!isPopUpInfo)
+        {
+            if ((collision.gameObject.tag == "Player") && (!dialogueInitiated))
+            {
+                player = collision.gameObject.GetComponent<Transform>();
 
-            // initiate convo
-            advancedDialogueManager.InitiateDialogue(this, GetQuestConvo());
-            dialogueInitiated = true;                          
+                // initiate convo
+                advancedDialogueManager.InitiateDialogue(this, GetQuestConvo());
+
+                dialogueInitiated = true;
+                UpdatePosition(positionBottom);
+
+            }
         }
     }
 
@@ -80,12 +105,17 @@ public class NPCDialogue : MonoBehaviour
             spriteRenderer.sprite = positionRight;
         else if (npc_sprite.position.y <= player.position.y && xdiff < ydiff)
             spriteRenderer.sprite = positionTop;
-        
+
     }
 
     public void UpdateDialogueFlag(bool flag)
     {
         dialogueInitiated = flag;
+    }
+
+    public bool GetDialogueFlag()
+    {
+        return dialogueInitiated;
     }
 
     public void UpdatePosition(Sprite position)

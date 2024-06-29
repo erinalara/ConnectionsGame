@@ -33,7 +33,7 @@ public class AdvancedDialogueManager : MonoBehaviour
     private float typingSpeed = 0.02f;
     private Coroutine typeRoutine;
     private bool canContinueText = true;
-    
+
 
     private PlayerController player;
     private NPCDialogue npcDialogue;
@@ -50,7 +50,7 @@ public class AdvancedDialogueManager : MonoBehaviour
         optionButtonText = new TMP_Text[optionButton.Length];
         for (int i = 0; i < optionButton.Length; i++)
             optionButtonText[i] = optionButton[i].GetComponentInChildren<TMP_Text>();
-        
+
         // Default button display off
         for (int i = 0; i < optionButton.Length; i++)
         {
@@ -58,7 +58,7 @@ public class AdvancedDialogueManager : MonoBehaviour
         }
 
         dialogueCanvas = GameObject.Find("DialogueCanvas");
- 
+
         actor = GameObject.Find("ActorText").GetComponent<TMP_Text>();
         actor_name = "";
         portrait = GameObject.Find("Portrait").GetComponent<Image>();
@@ -66,47 +66,49 @@ public class AdvancedDialogueManager : MonoBehaviour
         dialogueCanvas.SetActive(false);
 
         player = GameObject.Find("Player").GetComponent<PlayerController>();
-        
-        
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
         // For pop up dialogue
-        if (((dialogueActivated && npcDialogue.isPopUpInfo) && stepNum == 0))
-        {
-            PlayDialogue();
-        }
-
-        else if (dialogueActivated && Input.GetButtonDown("Interact") && canContinueText)
-        {
-            // Change NPC direction
-            npcDialogue.ChangeDirection();
-
-            // restrict player movement
-            player.interactionActivated = true;
-
-            // cancel dialogue
-            if (stepNum >= currentConversation.actors.Length)
+        if ((npcDialogue) && (npcDialogue.GetDialogueFlag())) { 
+            if (((dialogueActivated && npcDialogue.isPopUpInfo) && stepNum == 0))
             {
-                TurnOffDialogue();
-
-                EvaluateQuest();
-            }
-            // continue dialogue
-            else
                 PlayDialogue();
-          
-        }   
+            }
+
+            else if (dialogueActivated && Input.GetButtonDown("Interact") && canContinueText)
+            {
+                // Change NPC direction
+                npcDialogue.ChangeDirection();
+
+                // restrict player movement
+                player.interactionActivated = true;
+
+                // cancel dialogue
+                if (stepNum >= currentConversation.actors.Length)
+                {
+                    TurnOffDialogue();
+
+                    EvaluateQuest();
+                }
+                // continue dialogue
+                else
+                    PlayDialogue();
+
+            }
+        }
     }
 
     void PlayDialogue()
     {
         // for Random NPC
-        if (currentConversation.actors[stepNum] == DialogueActors.Random)        
-            SetActorInfo(false);       
-        
+        if (currentConversation.actors[stepNum] == DialogueActors.Random)
+            SetActorInfo(false);
+
         // for recurring
         else
             SetActorInfo(true);
@@ -118,7 +120,7 @@ public class AdvancedDialogueManager : MonoBehaviour
         portrait.sprite = currPortrait;
         portrait.color = new Color32(255, 255, 255, 255);
         if (portrait.sprite == null)
-            portrait.color = new Color32(0,0,0,0);
+            portrait.color = new Color32(0, 0, 0, 0);
 
         // Check for option branch
         if (currentConversation.actors[stepNum] == DialogueActors.Branch)
@@ -132,10 +134,10 @@ public class AdvancedDialogueManager : MonoBehaviour
                     optionButtonText[i].text = currentConversation.optionText[i];
                     optionButton[i].SetActive(true);
                 }
-                optionButton[0].GetComponent<Button>().Select();     
+                optionButton[0].GetComponent<Button>().Select();
             }
         }
-       
+
         if (typeRoutine != null)
             StopCoroutine(typeRoutine);
 
@@ -145,7 +147,7 @@ public class AdvancedDialogueManager : MonoBehaviour
             optionsPanel.SetActive(true);
 
         dialogueCanvas.SetActive(true);
-        stepNum+=1;
+        stepNum += 1;
     }
 
     void SetActorInfo(bool recurringCharacter)
@@ -168,13 +170,13 @@ public class AdvancedDialogueManager : MonoBehaviour
             currentSpeaker = currentConversation.randomActorName;
             currPortrait = null;
             actor_name = "";
-        }       
+        }
     }
 
     public void Option(int optionNum)
     {
         foreach (GameObject button in optionButton)
-           button.SetActive(false);
+            button.SetActive(false);
 
         if (optionNum == 0)
             currentConversation = currentConversation.option0;
@@ -210,31 +212,29 @@ public class AdvancedDialogueManager : MonoBehaviour
         // array we are stepping through
         currentConversation = npcDialogue.conversation[convoNum];
         dialogueActivated = true;
-        this.npcDialogue = npcDialogue;       
+        this.npcDialogue = npcDialogue;
     }
 
     public void TurnOffDialogue()
     {
         stepNum = 0;
         dialogueActivated = false;
-
-        npcDialogue.UpdateDialogueFlag(false);
-        npcDialogue.UpdatePosition(npcDialogue.positionBottom);
-
         optionsPanel.SetActive(false);
         dialogueCanvas.SetActive(false);
         // let player move again
         player.interactionActivated = false;
+
+        npcDialogue.UpdateDialogueFlag(false);
     }
 
     public void EvaluateQuest()
-    {   
+    {
         if (currentConversation.quest != null)
         {
             if (actor_name == "")
                 actor_name = currentConversation.quest.itemName;
-            var questHandler = GameObject.Find(actor_name).transform.Find("QuestHandler").GetComponent<QuestHandler>();           
-            questHandler.EvaluateQuestStatus(currentConversation.updatedQuestStatus, currentConversation.userChoice);           
+            var questHandler = GameObject.Find(actor_name).transform.Find("QuestHandler").GetComponent<QuestHandler>();
+            questHandler.EvaluateQuestStatus(currentConversation.updatedQuestStatus, currentConversation.userChoice);
         }
     }
 }

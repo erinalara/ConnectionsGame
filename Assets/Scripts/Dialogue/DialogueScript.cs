@@ -26,6 +26,7 @@ public class DialogueScript : MonoBehaviour
         
         musicController = music.GetComponent<AudioController>();
         StartCoroutine(musicController.FadeIn());
+        coroutine = null;
 
     }
 
@@ -36,6 +37,7 @@ public class DialogueScript : MonoBehaviour
         {
             if (textComponent.text == lines[index]) {
                 NextLine();
+                
             }
             else
             {
@@ -54,10 +56,7 @@ public class DialogueScript : MonoBehaviour
         index = 0;
         coroutine = TypeLine();
         StartCoroutine(coroutine);
-        if (coroutine != null)
-        {
-            StopCoroutine(coroutine);
-        }
+        
     }
 
     IEnumerator TypeLine()
@@ -75,12 +74,17 @@ public class DialogueScript : MonoBehaviour
         {
             index++;
             textComponent.text = string.Empty;
-            StartCoroutine(TypeLine());
+            if (coroutine != null)
+            {
+                StopCoroutine(coroutine);
+            }
+            coroutine = TypeLine();
+            StartCoroutine(coroutine);           
         }
         else
         {
             gameObject.SetActive(false);
             tLoader.StartTransition();
-        }
+        }        
     }
 }

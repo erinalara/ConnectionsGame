@@ -938,6 +938,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeInTime: 3
   fadeOutTime: 3
+  volume: 0.1
 --- !u!114 &1177446029605937335
 MonoBehaviour:
   m_ObjectHideFlags: 0
