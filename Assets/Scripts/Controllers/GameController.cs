@@ -156,6 +156,8 @@ public class GameController : MonoBehaviour
                 Debug.Log("quit");
                 tLoader.StartTransition("MainScene");
                 Destroy(gameObject);
+                GameObject go = GameObject.Find("ConnectionBar");
+                Destroy(go);
             }
             gameMenu.SetActive(false);
         }
