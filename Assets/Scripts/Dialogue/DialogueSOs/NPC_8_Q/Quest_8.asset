@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   qType: 1
   originNPC: 10
-  status: 3
+  status: 2
   itemName: 
-  answerResults: 050000000600000005000000
+  answerResults: 0500000005000000060000000600000005000000050000000500000005000000
   survey: {fileID: 11400000, guid: 7379810276aa4f64c9a4dda1ea681b36, type: 2}

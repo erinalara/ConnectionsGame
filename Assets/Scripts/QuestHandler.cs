@@ -60,7 +60,12 @@ public class QuestHandler : MonoBehaviour
     public void UpdateWordQuest(QuestStatus qStatus, WordQuestType userChoice)
     {
         if (userChoice != WordQuestType.None && quest.status != QuestStatus.Inactive)
-            quest.answerResults.Add(userChoice);
+        {
+            if (quest.answerResults.Count < 3)
+            {
+                quest.answerResults.Add(userChoice);
+            }
+        }
         if (quest.status == QuestStatus.Completed)
         {
             UpdateBar();
