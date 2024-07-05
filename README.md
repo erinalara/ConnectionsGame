@@ -1,5 +1,5 @@
 # Connections Game
-My first Unity 2D pixel game.
+My first Unity 2D pixel game. Purely made for fun, and as a learning experience!
 
 A person moves back to their hometown, seeking to forge or reforge connections with the town's residents, by helping with certain tasks.
 
